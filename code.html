@@ -1,0 +1,21 @@
+<div id="result">
+
+</div>
+<script>
+$( document ).ready( function () {
+ 
+  var html = "";
+  $.ajax( {
+    url : "https://api.github.com/users/bignimbus/repos",
+    dataType : "jsonp",
+    success : function ( returndata ) {
+      $.each( returndata.data, function ( i, item ) {
+        html += '<h3><a href="' + this.html_url + '">' + this.name + '</a></h3>' +
+          '<p><strong>Description:</strong> ' + this.description + '<br />' +
+          '<strong>Updated:</strong> ' + this.updated_at + '</p>';
+      } );
+      $( '#result' ).append( html );
+    }
+  } );
+} );
+</script>

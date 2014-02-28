@@ -1,0 +1,192 @@
+@font-face
+{
+font-family: mario3;
+src: url('fonts/mario/Super-Mario-Bros--3.woff');
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	height: 100%;
+	background:url('images/patternlight.png') repeat;
+}
+
+#container{
+	background: white;
+	border-style: solid;
+	border-width: 0.125em;
+	border-color: black;
+	width: 50em;
+	margin: 0 auto;
+	padding: 2em;
+	text-align: left;
+	min-height: 100%;
+}
+
+header{
+	clear:both;
+	text-align: center;
+	margin: 0 auto;
+	height: 6.25em;
+}
+
+div{
+	margin: 0 auto;
+}
+
+div.center{
+	width: 33.4%;
+	float:left;
+}
+
+div.left{
+	width: 33.3%;
+	float:left;
+}
+
+div.right{
+	width: 33.3%;
+	float:left;
+}
+
+div.bottom{
+	clear:both;
+	height: 2.5em;
+	width:100%;
+	padding-top:2em;
+	text-align: center;
+}
+
+div.viewerwrapper{
+	position:inherit;
+	width:40em;
+	min-height:91%;
+}
+
+div.vignette{
+	margin: 0 auto; 
+	text-align:center;
+}
+
+#leftnav{
+	float:left;
+	display:inline;
+	width:1em;
+	height:5em;
+	vertical-align:middle;
+	margin-top:10em;
+}
+
+#rightnav{
+	width:1em;
+	height:5em;
+	display:inline;
+	float:left;
+	vertical-align:middle;
+	margin-top:10em;
+}
+
+#viewer{
+	display:inline;
+	float:left;
+	width:38em;
+	min-height:30em;
+}
+
+ul{
+}
+
+#navbar{
+	margin: 0 auto;
+	height: 2.5em;
+	width:100%;
+	font-size: 1.5em;
+	font-family: mario3;
+	float:left;
+	text-align:center;
+	padding-top:0.25em;
+	padding-bottom: 0.25em;
+}
+
+li{
+}
+
+li.select{
+	vertical-align: middle;
+	display: inline;
+	width: 0.8em;
+	padding: 0.25em;
+	color: black;
+	text-decoration: none;
+}
+
+a.menuitem{
+	color: black;
+	text-decoration: none;
+}
+
+a.menuitem:before{
+	display:inline-block;
+	position: inherit;
+	content: url('images/blank.png');
+}
+
+a.menuitem:hover:before{
+	display:inline-block;
+	position: inherit;
+	content: url('images/arrow.png');
+}
+
+a.menuitem:active:before{
+	display:inline-block;
+	position: inherit;
+	content: url('images/arrow.png');
+}
+
+article{
+	padding-left:5em;
+	padding-right:5em;
+}
+
+h1{
+	font-family: mario3;
+}
+
+h2{
+	font-family: mario3;
+}
+
+h3{
+	font-family: mario3;
+	color:gray;
+}
+
+p{
+	font-family:"Courier New", Courier, monospace;
+	vertical-align:middle;
+}
+
+p.foot{
+	color: gray;
+}
+
+nav{
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+img{
+	max-width 100%;
+}
+
+audio{
+	width:100%;
+}
+
+footer{
+}
