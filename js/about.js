@@ -1,4 +1,4 @@
-	$(document).ready(function(){
+
 		$("#viewer").load("pages/details.html #live", function(){
 			var pageIndex = 0; // integer representing current position in page array
 					
@@ -14,7 +14,6 @@
 				// add jQuery .animate()
 			});
 		});
-	});
 	
 	function numberOfPages(){ 
 // planning ahead, this function sets the number of "about" subsections.

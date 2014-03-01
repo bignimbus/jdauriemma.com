@@ -1,10 +1,9 @@
-	$(document).ready(function(){
+
 		$("article").load("about.html", function(){
 			$("article").css("height", "auto");
 			$("a#about").css("text-decoration", "underline");
 			menuItems(); // load navigation
 		});
-	});
 	
 // return an array of all the pages on this website.
 // I used this function to make it simpler to expand the website in the future.

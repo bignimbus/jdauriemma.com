@@ -1,8 +1,6 @@
 to do
 
-format music.html w/ mp3 players
-format code section
-test twitter feed, clearing caches
 compress png
 start animation
 add "loading" to social
+add link img after a.code

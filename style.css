@@ -1,7 +1,11 @@
 @font-face
 {
 font-family: mario3;
-src: url('fonts/mario/Super-Mario-Bros--3.woff');
+src: url('fonts/mario/Super-Mario-Bros--3.woff'),
+		 url('fonts/mario/Super-Mario-Bros-3?#iefix') format('embedded-opentype'), 
+	     url('myfont-webfont.woff') format('woff'), 
+	     url('fonts/mario/Super-Mario-Bros--3.ttf')  format('truetype'),
+	     url('fonts/mario/Super-Mario-Bros-3.svg#svgFontName') format('svg');
 }
 
 html{
@@ -68,6 +72,10 @@ div.viewerwrapper{
 div.vignette{
 	margin: 0 auto; 
 	text-align:center;
+}
+
+div.code{
+	margin: 0em 0em 3em 0em;
 }
 
 #leftnav{
@@ -145,6 +153,10 @@ a.menuitem:active:before{
 	content: url('images/arrow.png');
 }
 
+a.git:hover:after{
+	content: url('images/chainlink.png');
+}
+
 article{
 	padding-left:5em;
 	padding-right:5em;
@@ -152,15 +164,18 @@ article{
 
 h1{
 	font-family: mario3;
+	font-size: 2em;
 }
 
 h2{
 	font-family: mario3;
+	font-size: 1.3em;
 }
 
 h3{
 	font-family: mario3;
 	color:gray;
+	font-size: 1.2em;
 }
 
 p{
@@ -176,7 +191,7 @@ nav{
 }
 
 a{
-	color: black;
+	color: gray;
 	text-decoration: none;
 }
 
