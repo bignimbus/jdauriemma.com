@@ -14,7 +14,7 @@ html{
 
 body{
 	height: 100%;
-	background:url('images/patternlight.png') repeat;
+	background:url('images/patternlight2.png') repeat;
 }
 
 #container{
@@ -154,7 +154,7 @@ a.menuitem:active:before{
 }
 
 a.git:hover:after{
-	content: url('images/chainlink.png');
+	text-decoration: underline;
 }
 
 article{

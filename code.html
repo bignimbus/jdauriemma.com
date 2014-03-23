@@ -1,12 +1,12 @@
 <p>
 I began coding at age 12 when my friend and I started our own business making websites for local businesses.  Recently, I have added more advanced JavaScript, PHP, jQuery and Java ME skills to my repertoire.  Here are some recent projects of mine.
 </p>
-<div id="github">
-
-</div>
+<h2>Repositories</h2>
+<div id="github"></div>
+<h2>Gists</h2>
+<div id="gist"></div>
 <script>
 $( document ).ready( function () {
- 
   var html = "";
   $.ajax( {
     url : "https://api.github.com/users/bignimbus/repos",
@@ -16,12 +16,27 @@ $( document ).ready( function () {
 		console.log(this);
         html += '<div class = "code"><img src="' + this.owner.avatar_url + '" style="width:2em; height:2em; border:1px solid black; clear:none; display:inline-block;">' + 
 		'<span style="display:inline-block;"><h3><a class="git" href="' + this.html_url + '">' + this.name + '</a></h3></span>' +
-		'<p><strong>Owner:</strong> ' + this.owner.login + '<br />' +
-        '<strong>Description:</strong> ' + this.description + '<br />' +
+        '<p><strong>Description:</strong> ' + this.description + '<br />' +
         '<strong>Updated:</strong> ' + this.updated_at.slice(0,10) + '</p></div>';
       } );
       $( '#github' ).append( html );
+      html = "";
     }
   } );
+  $.ajax( {
+      url : "https://api.github.com/users/bignimbus/gists",
+      dataType : "jsonp",
+      success : function ( returndata ) {
+        $.each( returndata.data, function ( i, item ) {
+          console.log(this);
+          html += '<div class = "code"><img src="' + this.user.avatar_url + '" style="width:2em; height:2em; border:1px solid black; clear:none; display:inline-block;">' +
+          '<span style="display:inline-block;"><h3><a class="git" href="' + this.html_url + '">' + Object.keys(this.files)[0] + '</a></h3></span>' +
+          '<p><strong>Description:</strong> ' + this.description + '<br />' +
+          '<strong>Updated:</strong> ' + this.updated_at.slice(0,10) + '</p></div>';
+        } );
+        $( '#gist' ).append( html );
+          html = "";
+      }
+    } );
 } );
 </script>

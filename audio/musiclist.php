@@ -11,10 +11,10 @@ $getID3 = new getID3;
 		foreach($music as $key=>$value) {
 			 $fileinfo = $getID3->analyze("./mp3/".$music[$key]);
 			 $playlist[$key] = array(
-			 $music[$key],
-			 $fileinfo['tags']['id3v1']['title'][0],
-			 $fileinfo['tags']['id3v1']['artist'][0],
-			 $fileinfo['tags']['id3v1']['comment'][0]
+				$music[$key],
+				$fileinfo['tags']['id3v1']['title'][0],
+				$fileinfo['tags']['id3v1']['artist'][0],
+				$fileinfo['tags']['id3v1']['comment'][0]
 			 );
 		}
 	echo json_encode($playlist);

@@ -53,23 +53,3 @@
 		
 			return pageIndex;
 	}
-	
-//	$("#viewer").on("swipeleft", function(){
-//		if (pageIndex <= 3){
-//			var pageToLoad = viewerIndex("next");
-//			$("#viewer").load("pages/details.html #"+pageToLoad);
-//		}
-//	});
-//	
-//	$("viewer").on("swiperight", function(){
-//		if (pageIndex > 0){
-//		var pageToLoad = viewerIndex("previous");
-//			$("#viewer").load("pages/details.html #"+pageToLoad);
-//		}
-//	}):
-
-//findnext findprevious functions
-
-//determine array position, specify next position
-
-//load appropriate page#id

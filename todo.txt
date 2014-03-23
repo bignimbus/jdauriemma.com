@@ -2,5 +2,5 @@ to do
 
 compress png
 start animation
-add "loading" to social
-add link img after a.code
+add "loading"
+rework backgrounds in "about"
