@@ -36,11 +36,11 @@
 		$("a#" + l).click(function(e){
 			e.preventDefault();
 			clearUnderline();
-			$("article").fadeOut(400, "swing", function(){
-				$("article").load(l + ".html");
-			});
-			$("article").fadeIn(400, function(){
-			$("a#" + l).css("text-decoration", "underline");
-			});
+            $("article").fadeOut(400, "swing", function(){
+                $("article").load(l + ".html");
+                $("article").fadeIn(400, function(){
+                    $("a#" + l).css("text-decoration", "underline");
+                });
+            });
 		});
 	}
