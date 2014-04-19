@@ -1,14 +1,24 @@
+var bgImage = (function () {
+    //random background image
+    var images = ['sky.png', 'clouds.jpg', 'retro.jpg', 'city.png', 'landscape.jpg'];
+    var i = Math.floor(Math.random() * images.length);
+    return 'images/' + images[i];
+})();
+$('body').css('background', '#000 url(' + bgImage + ') no-repeat');
+$('body').css('background-attachment', 'fixed');
+$('body').css('background-size', 'cover');
+$('body').css('background-position', 'center');
 
-		$("article").load("about.html", function(){
-			$("article").css("height", "auto");
-			$("a#about").css("text-decoration", "underline");
-			menuItems(); // load navigation
-		});
+$("article").load("about.html", function(){
+	$("article").css("height", "auto");
+	$("a#about").css("text-decoration", "underline");
+	menuItems(); // load navigation
+});
 	
 // return an array of all the pages on this website.
 // I used this function to make it simpler to expand the website in the future.
 	function navElements(){
-		var navItem = new Array();
+		var navItem = [];
 		$("div#navbar").find("a").each(function(){
 			navItem.push($(this).prop('id'));
 		});
@@ -17,7 +27,7 @@
 
 // loads the click listeners for menu items
 	function menuItems(){
-		navItem = navElements();
+		var navItem = navElements();
 		for (i in navItem){
 			navLoad(navItem[i]);
 		}
@@ -37,9 +47,10 @@
 			e.preventDefault();
 			clearUnderline();
             $("article").fadeOut(400, "swing", function(){
-                $("article").load(l + ".html");
-                $("article").fadeIn(400, function(){
-                    $("a#" + l).css("text-decoration", "underline");
+                $("article").load(l + ".html", function(){
+                    $("article").fadeIn(400, function(){
+                        $("a#" + l).css("text-decoration", "underline");
+                    });
                 });
             });
 		});

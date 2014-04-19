@@ -29,7 +29,7 @@ $( document ).ready( function () {
       success : function ( returndata ) {
         $.each( returndata.data, function ( i, item ) {
           console.log(this);
-          html += '<div class = "code"><img src="' + this.user.avatar_url + '" style="width:2em; height:2em; border:1px solid black; clear:none; display:inline-block;">' +
+          html += '<div class = "code"><img src="' + this.owner.avatar_url + '" style="width:2em; height:2em; border:1px solid black; clear:none; display:inline-block;">' +
           '<span style="display:inline-block;"><h3><a class="git" href="' + this.html_url + '">' + Object.keys(this.files)[0] + '</a></h3></span>' +
           '<p><strong>Description:</strong> ' + this.description + '<br />' +
           '<strong>Updated:</strong> ' + this.updated_at.slice(0,10) + '</p></div>';
