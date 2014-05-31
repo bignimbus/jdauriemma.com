@@ -153,7 +153,7 @@ a.menuitem:active:before{
 	content: url('images/arrow.png');
 }
 
-a.git:hover:after{
+a.git:hover{
 	text-decoration: underline;
 }
 
@@ -196,7 +196,7 @@ a{
 }
 
 img{
-	max-width 100%;
+	max-width: 100%;
 }
 
 audio{
