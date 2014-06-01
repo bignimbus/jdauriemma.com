@@ -9,9 +9,9 @@ $('body').css('background-attachment', 'fixed');
 $('body').css('background-size', 'cover');
 $('body').css('background-position', 'center');
 
-$("article").load("about.html", function(){
+$("article").load("blog.html", function(){
 	$("article").css("height", "auto");
-	$("a#about").css("text-decoration", "underline");
+	$("a#blog").css("text-decoration", "underline");
 	menuItems(); // load navigation
 });
 	

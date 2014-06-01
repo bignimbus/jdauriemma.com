@@ -33,10 +33,11 @@
 	}
 	
 	for (var i in tweets) {
-	    $('#feed').append('<div id = "tweet' + i.toString() + '">');
-	    $('#tweet' + i.toString()).html('<img src="' + tweets[i].avatar + '" style="height: 3em; width: 3em; border:1px solid black; clear:none; display:inline-block;"><span style="display:inline-block;"><h3>' + tweets[i].name + '</h3></span><p><a href="' + tweets[i].link + '" target = "blank"><em>@' + tweets[i].handle + ' on '+ tweets[i].timestamp +' </em></a><br />' + tweets[i].text + '<br /></p>');
-	    if (tweets[i].pic) $('#tweet' + i.toString()).append('<a href="'+ tweets[i].link +'" target="blank"><img src="' + tweets[i].pic.url + '" style="height: ' + tweets[i].pic.height + 'em; width: ' + tweets[i].pic.width + 'em"></a>');
-		$('#tweet' + i.toString()).append('</div><br /><br />');
+	    $('#feed').append('<div id = "tweet' + i + '">');
+	    $('#tweet' + i).html('<img src="' + tweets[i].avatar + '" style="height: 3em; width: 3em; border:1px solid black; clear:none; display:inline-block;"><span style="display:inline-block;"><h3>' + tweets[i].name + '</h3></span><p><a href="' + tweets[i].link + '" target = "blank"><em>@' + tweets[i].handle + ' on '+ tweets[i].timestamp +' </em></a><br />' + tweets[i].text + '<br /></p>');
+	    if (tweets[i].pic) $('#tweet' + i).append('<a href="'+ tweets[i].link +'" target="blank"><img src="' + tweets[i].pic.url + '" style="height: ' + tweets[i].pic.height + 'em; width: ' + tweets[i].pic.width + 'em"></a>');
+		$('#tweet' + i).append('</div><br /><br />');
+		if ($("#loading") && i == tweets.length - 1) $("#loading").remove();
 	}
 	
 });

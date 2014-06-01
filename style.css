@@ -27,6 +27,7 @@ body{
 	padding: 2em;
 	text-align: left;
 	min-height: 100%;
+	overflow-x: hidden;
 }
 
 header{
@@ -201,6 +202,10 @@ img{
 
 audio{
 	width:100%;
+}
+
+pre{
+    overflow-x: auto;
 }
 
 footer{
