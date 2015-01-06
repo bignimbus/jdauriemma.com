@@ -27,7 +27,7 @@ body{
 	padding: 2em;
 	text-align: left;
 	min-height: 100%;
-	overflow-x: hidden;
+        overflow-x: hidden;
 }
 
 header{
@@ -138,19 +138,20 @@ a.menuitem{
 
 a.menuitem:before{
 	display:inline-block;
-	position: inherit;
+	position: relative;
 	content: url('images/blank.png');
+	width: 1.31em;
 }
 
 a.menuitem:hover:before{
 	display:inline-block;
-	position: inherit;
+	position: relative;
 	content: url('images/arrow.png');
 }
 
 a.menuitem:active:before{
 	display:inline-block;
-	position: inherit;
+	position: relative;
 	content: url('images/arrow.png');
 }
 
@@ -180,7 +181,7 @@ h3{
 }
 
 p{
-	font-family:"Courier New", Courier, monospace;
+	font-family: Monaco, Consolas, "Lucida Console", monospace;
 	vertical-align:middle;
 }
 
