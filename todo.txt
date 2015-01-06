@@ -1,6 +1,6 @@
 to do
 
-compress png
-start animation
-add "loading"
-rework backgrounds in "about"
+migrate to new dir structure
+build model / collection structure
+build view structure
+manage deploy/templating structure

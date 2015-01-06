@@ -27,7 +27,8 @@ local.properties
 
 # PDT-specific
 .buildpath
-
+node_modules/
+bower_components/
 
 #################
 ## Visual Studio
