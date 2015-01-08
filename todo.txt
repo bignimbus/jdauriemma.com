@@ -1,6 +1,5 @@
 to do
 
-migrate to new dir structure
 build model / collection structure
 build view structure
 manage deploy/templating structure
