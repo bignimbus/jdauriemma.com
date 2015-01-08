@@ -1,11 +1,11 @@
 @font-face
 {
 font-family: mario3;
-src: url('fonts/mario/Super-Mario-Bros--3.woff'),
-		 url('fonts/mario/Super-Mario-Bros-3?#iefix') format('embedded-opentype'), 
-	     url('myfont-webfont.woff') format('woff'), 
-	     url('fonts/mario/Super-Mario-Bros--3.ttf')  format('truetype'),
-	     url('fonts/mario/Super-Mario-Bros-3.svg#svgFontName') format('svg');
+src: url('../fonts/mario/Super-Mario-Bros--3.woff'),
+		 url('../fonts/mario/Super-Mario-Bros-3?#iefix') format('embedded-opentype'), 
+	     url('../myfont-webfont.woff') format('woff'), 
+	     url('../fonts/mario/Super-Mario-Bros--3.ttf')  format('truetype'),
+	     url('../fonts/mario/Super-Mario-Bros-3.svg#svgFontName') format('svg');
 }
 
 html{
@@ -139,20 +139,20 @@ a.menuitem{
 a.menuitem:before{
 	display:inline-block;
 	position: relative;
-	content: url('images/blank.png');
+	content: url('../images/blank.png');
 	width: 1.31em;
 }
 
 a.menuitem:hover:before{
 	display:inline-block;
 	position: relative;
-	content: url('images/arrow.png');
+	content: url('../images/arrow.png');
 }
 
 a.menuitem:active:before{
 	display:inline-block;
 	position: relative;
-	content: url('images/arrow.png');
+	content: url('../images/arrow.png');
 }
 
 a.git:hover{
