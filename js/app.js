@@ -1,15 +1,8 @@
-require(['router', 'models/main', 'views/main'],
-function (Router, ParentModel, ParentView) {
+require(['router'],
+function (Router) {
     'use strict';
     var app = {};
-    app.model = new ParentModel();
-    app.router = new Router({"model": app.model});
-    app.view = new ParentView({
-        "model": app.model,
-        "router": app.router
-    });
-
+    app.router = new Router();
     Backbone.history.start();
-
     return app.router;
 });

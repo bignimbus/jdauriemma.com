@@ -1,4 +1,5 @@
-define([], function () {
+define(['views/main', 'models/song', 'collections/songs'],
+function (AppView, SongModel, SongCollection) {
     'use strict';
 
     return Backbone.Router.extend({
@@ -10,29 +11,34 @@ define([], function () {
             'social': 'social'
         },
 
+        "view": null,
+
         "initialize": function (options, model) {
             this.options = options || {};
-            this.model = options.model;
         },
 
         "defaultRoute": function () {
-            this.blog();
+            this.music();
         },
 
         "blog": function () {
-            this.model.set("state", "blog");
+
         },
 
         "code": function () {
-            this.model.set("state", "code");
+
         },
 
         "music": function () {
-            this.model.set("state", "music");
+            var collection = new SongCollection();
+            collection.fetch();
+            // this.view = new AppView({
+            //     "model": 
+            // });
         },
 
         "social": function () {
-            this.model.set("state", "social");
+
         }
     });
 });
