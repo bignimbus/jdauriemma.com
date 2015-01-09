@@ -32,11 +32,9 @@ module.exports = function (grunt) {
                 "amd": true
             },
             "files": {
-                "expand": true, // Enable dynamic expansion.
-                "cwd": 'handlebars/', // Src matches are relative to this path.
-                "src": ['**/*.hbs'], // Actual pattern(s) to match.
-                "dest": 'templates', // Destination path prefix.
-                "ext": '.js' // Dest filepaths will have this extension.
+                "expand": true,
+                "src": ['js/templates/*.hbs'],
+                "ext": '.js'
             },
         },
         // "jasmine": {

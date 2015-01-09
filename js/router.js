@@ -3,7 +3,11 @@ define([], function () {
 
     return Backbone.Router.extend({
         "routes": {
-            '': 'defaultRoute'
+            '': 'defaultRoute',
+            'blog': '',
+            'code': '',
+            'music': '',
+            'social': ''
         },
 
         "initialize": function (options, model) {
