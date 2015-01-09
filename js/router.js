@@ -4,10 +4,10 @@ define([], function () {
     return Backbone.Router.extend({
         "routes": {
             '': 'defaultRoute',
-            'blog': '',
-            'code': '',
-            'music': '',
-            'social': ''
+            'blog': 'blog',
+            'code': 'code',
+            'music': 'music',
+            'social': 'social'
         },
 
         "initialize": function (options, model) {
@@ -16,7 +16,23 @@ define([], function () {
         },
 
         "defaultRoute": function () {
+            this.blog();
+        },
 
+        "blog": function () {
+            this.model.set("state", "blog");
+        },
+
+        "code": function () {
+            this.model.set("state", "code");
+        },
+
+        "music": function () {
+            this.model.set("state", "music");
+        },
+
+        "social": function () {
+            this.model.set("state", "social");
         }
     });
 });
