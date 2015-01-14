@@ -9,6 +9,7 @@
 #music ul,
 #social ul {
   list-style: none;
+  padding: 0;
 }
 html {
   height: 100%;
