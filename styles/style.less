@@ -1,0 +1,198 @@
+@font-face {
+font-family: mario3;
+src: url('../fonts/mario/Super-Mario-Bros--3.woff'),
+		 url('../fonts/mario/Super-Mario-Bros-3?#iefix') format('embedded-opentype'), 
+	     url('../myfont-webfont.woff') format('woff'), 
+	     url('../fonts/mario/Super-Mario-Bros--3.ttf')  format('truetype'),
+	     url('../fonts/mario/Super-Mario-Bros-3.svg#svgFontName') format('svg');
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background: gray;
+}
+
+#container {
+	background: white;
+	border: 0.125em solid #000;
+	margin: 0 auto;
+	padding: 2em;
+	min-height: 100%;
+    overflow-x: hidden;
+    text-align: left;
+    width: 50em;
+}
+
+header {
+	clear:both;
+	margin: 0 auto;
+	height: 6.25em;
+	text-align: center;
+}
+
+div {
+	margin: 0 auto;
+}
+
+div.center {
+	float: left;
+	width: 33.4%;
+}
+
+div.left {
+	float: left;g
+	width: 33.3%;
+}
+
+div.right {
+	float: left;
+	width: 33.3%;
+}
+
+div.bottom {
+	clear: both;
+	height: 2.5em;
+	padding-top: 2em;
+	text-align: center;
+	width: 100%;
+}
+
+div.viewerwrapper {
+	min-height: 91%;
+	position: inherit;
+	width: 40em;
+}
+
+div.vignette {
+	margin: 0 auto; 
+	text-align: center;
+}
+
+div.code {
+	margin: 0 0 3em 0;
+}
+
+#leftnav {
+	display: inline;
+	float: left;
+	height: 5em;
+	margin-top: 10em;
+	vertical-align: middle;
+	width: 1em;
+}
+
+#rightnav {
+	display: inline;
+	float: left;
+	height: 5em;
+	margin-top: 10em;
+	vertical-align: middle;
+	width: 1em;
+}
+
+#viewer {
+	display: inline;
+	float: left;
+	min-height: 30em;
+	width: 38em;
+}
+
+#navbar {
+	float: left;
+	font-size: 1.5em;
+	font-family: mario3;
+	height: 2.5em;
+	margin: 0 auto;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	text-align: center;
+	width: 100%;
+}
+
+li.select {
+	color: #000;
+	display: inline;
+	padding: 0.25em;
+	text-decoration: none;
+	vertical-align: middle;
+	width: 0.8em;
+}
+
+a.menuitem {
+	color: #000;
+	text-decoration: none;
+}
+
+a.menuitem:before {
+	content: url('../images/blank.png');
+	display:inline-block;
+	position: relative;
+	width: 1.31em;
+}
+
+a.menuitem:hover:before {
+	content: url('../images/arrow.png');
+	display:inline-block;
+	position: relative;
+}
+
+a.menuitem:active:before {
+	content: url('../images/arrow.png');
+	display:inline-block;
+	position: relative;
+}
+
+a.git:hover {
+	text-decoration: underline;
+}
+
+article {
+	padding-left:5em;
+	padding-right:5em;
+}
+
+h1 {
+	font-family: mario3;
+	font-size: 2em;
+}
+
+h2 {
+	font-family: mario3;
+	font-size: 1.3em;
+}
+
+h3 {
+	color: gray;
+	font-family: mario3;
+	font-size: 1.2em;
+}
+
+p {
+	font-family: Monaco, Consolas, "Lucida Console", monospace;
+	vertical-align:middle;
+}
+
+p.foot {
+	color: gray;
+}
+
+a {
+	color: gray;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+audio {
+	width:100%;
+}
+
+pre {
+    overflow-x: auto;
+}
