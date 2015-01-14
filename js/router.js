@@ -36,21 +36,24 @@ function (
         "code": function () {
             var collection = new GithubCollection();
             this.loadPage({
-                "template": codeTemplate
+                "template": codeTemplate,
+                "id": "code"
             }, collection);
         },
 
         "music": function () {
             var collection = new SongCollection();
             this.loadPage({
-                "template": musicTemplate
+                "template": musicTemplate,
+                "id": "music"
             }, collection);
         },
 
         "social": function () {
             var collection = new TweetCollection();
             this.loadPage({
-                "template": socialTemplate
+                "template": socialTemplate,
+                "id": "social"
             }, collection);
         },
 

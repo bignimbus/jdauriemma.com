@@ -5,10 +5,16 @@ I started playing music at age 9 and haven't looked back.  Below are some sample
 <div id="playlist">
 </div>
 {{#each this}}
-<ul>
-    <li>{{file}}</li>
-    <li>{{title}}</li>
-    <li>{{performer}}</li>
-    <li>{{role}}</li>
-</ul>
+<div class="song" id="{{index}}">
+    <h3>{{title}}</h3>
+    <audio controls preload="none">
+        <source src="audio/mp3/{{file}}.mp3" type="audio/mpeg"></source>
+        <source src="audio/ogg/{{file}}.ogg" type="audio/ogg"></source>
+        <p>Your browser does not support the audio element.</p>
+    </audio>
+    <ul>
+        <li>Performer: {{performer}}</li>
+        <li>My Role: {{role}}</li>
+    </ul>
+</div>
 {{/each}}
