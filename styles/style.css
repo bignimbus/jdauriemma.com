@@ -2,6 +2,14 @@
   font-family: mario3;
   src: url('../fonts/mario/Super-Mario-Bros--3.woff'), url('../fonts/mario/Super-Mario-Bros-3?#iefix') format('embedded-opentype'), url('../myfont-webfont.woff') format('woff'), url('../fonts/mario/Super-Mario-Bros--3.ttf') format('truetype'), url('../fonts/mario/Super-Mario-Bros-3.svg#svgFontName') format('svg');
 }
+#music li,
+#social li {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+}
+#music ul,
+#social ul {
+  list-style: none;
+}
 html {
   height: 100%;
 }
