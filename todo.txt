@@ -1,5 +1,3 @@
 to do
 
-build model / collection structure
-build view structure
-manage deploy/templating structure
+build github php api

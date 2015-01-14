@@ -29,6 +29,7 @@ local.properties
 .buildpath
 node_modules/
 bower_components/
+keys/
 
 #################
 ## Visual Studio
