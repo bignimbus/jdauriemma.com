@@ -1,10 +1,10 @@
 @font-face {
 font-family: mario3;
 src: url('../fonts/mario/Super-Mario-Bros--3.woff'),
-		 url('../fonts/mario/Super-Mario-Bros-3?#iefix') format('embedded-opentype'), 
-	     url('../myfont-webfont.woff') format('woff'), 
-	     url('../fonts/mario/Super-Mario-Bros--3.ttf')  format('truetype'),
-	     url('../fonts/mario/Super-Mario-Bros-3.svg#svgFontName') format('svg');
+	 url('../fonts/mario/Super-Mario-Bros-3?#iefix') format('embedded-opentype'), 
+     url('../myfont-webfont.woff') format('woff'), 
+     url('../fonts/mario/Super-Mario-Bros--3.ttf')  format('truetype'),
+     url('../fonts/mario/Super-Mario-Bros-3.svg#svgFontName') format('svg');
 }
 
 html {
@@ -34,46 +34,46 @@ header {
 	text-align: center;
 }
 
+article {
+	padding-left:5em;
+	padding-right:5em;
+}
+
 div {
 	margin: 0 auto;
-}
+	&.center {
+		float: left;
+		width: 33.4%;
+	}
+	&.left {
+		float: left;
+		width: 33.3%;
+	}
+	&.right {
+		float: left;
+		width: 33.3%;
+	}
+	&.bottom {
+		clear: both;
+		height: 2.5em;
+		padding-top: 2em;
+		text-align: center;
+		width: 100%;
+	}
+	&.viewerwrapper {
+		min-height: 91%;
+		position: inherit;
+		width: 40em;
+	}
 
-div.center {
-	float: left;
-	width: 33.4%;
-}
+	&.vignette {
+		margin: 0 auto; 
+		text-align: center;
+	}
 
-div.left {
-	float: left;g
-	width: 33.3%;
-}
-
-div.right {
-	float: left;
-	width: 33.3%;
-}
-
-div.bottom {
-	clear: both;
-	height: 2.5em;
-	padding-top: 2em;
-	text-align: center;
-	width: 100%;
-}
-
-div.viewerwrapper {
-	min-height: 91%;
-	position: inherit;
-	width: 40em;
-}
-
-div.vignette {
-	margin: 0 auto; 
-	text-align: center;
-}
-
-div.code {
-	margin: 0 0 3em 0;
+	&.code {
+		margin: 0 0 3em 0;
+	}
 }
 
 #leftnav {
@@ -122,37 +122,36 @@ li.select {
 	width: 0.8em;
 }
 
-a.menuitem {
-	color: #000;
+a {
+	color: gray;
 	text-decoration: none;
-}
+	&.menuitem {
+		color: #000;
+		text-decoration: none;
+	}
 
-a.menuitem:before {
-	content: url('../images/blank.png');
-	display:inline-block;
-	position: relative;
-	width: 1.31em;
-}
+	&.menuitem:before {
+		content: url('../images/blank.png');
+		display:inline-block;
+		position: relative;
+		width: 1.31em;
+	}
 
-a.menuitem:hover:before {
-	content: url('../images/arrow.png');
-	display:inline-block;
-	position: relative;
-}
+	&.menuitem:hover:before {
+		content: url('../images/arrow.png');
+		display:inline-block;
+		position: relative;
+	}
 
-a.menuitem:active:before {
-	content: url('../images/arrow.png');
-	display:inline-block;
-	position: relative;
-}
+	&.menuitem:active:before {
+		content: url('../images/arrow.png');
+		display:inline-block;
+		position: relative;
+	}
 
-a.git:hover {
-	text-decoration: underline;
-}
-
-article {
-	padding-left:5em;
-	padding-right:5em;
+	&.git:hover {
+		text-decoration: underline;
+	}
 }
 
 h1 {
@@ -174,15 +173,9 @@ h3 {
 p {
 	font-family: Monaco, Consolas, "Lucida Console", monospace;
 	vertical-align:middle;
-}
-
-p.foot {
-	color: gray;
-}
-
-a {
-	color: gray;
-	text-decoration: none;
+	&.foot {
+		color: gray;
+	}
 }
 
 img {

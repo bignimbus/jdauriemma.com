@@ -25,6 +25,10 @@ header {
   height: 6.25em;
   text-align: center;
 }
+article {
+  padding-left: 5em;
+  padding-right: 5em;
+}
 div {
   margin: 0 auto;
 }
@@ -34,7 +38,7 @@ div.center {
 }
 div.left {
   float: left;
-  gwidth: 33.3%;
+  width: 33.3%;
 }
 div.right {
   float: left;
@@ -100,6 +104,10 @@ li.select {
   vertical-align: middle;
   width: 0.8em;
 }
+a {
+  color: gray;
+  text-decoration: none;
+}
 a.menuitem {
   color: #000;
   text-decoration: none;
@@ -123,10 +131,6 @@ a.menuitem:active:before {
 a.git:hover {
   text-decoration: underline;
 }
-article {
-  padding-left: 5em;
-  padding-right: 5em;
-}
 h1 {
   font-family: mario3;
   font-size: 2em;
@@ -146,10 +150,6 @@ p {
 }
 p.foot {
   color: gray;
-}
-a {
-  color: gray;
-  text-decoration: none;
 }
 img {
   max-width: 100%;
