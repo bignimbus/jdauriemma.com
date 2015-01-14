@@ -4,12 +4,12 @@ I began coding at age 12 when my friend and I started our own business making we
 <h2>Repositories</h2>
 <div id="repos">
 {{#each repos}}
-    <div id="{{repo.id}}" class="repo">
+    <div id="{{repo.id}}" class="repo code">
         <ul>
-            <li>{{repo.name}}</li>
+            <li><img src="{{#if repo.fork}}{{#with parent.parent.owner}}{{avatar_url}}">{{login}}{{/with}}{{else}}{{repo.owner.avatar_url}}">{{repo.owner.login}}{{/if}}</li>
+            <li><a href="{{repo.html_url}}">{{repo.name}}</a></li>
             <li>{{repo.description}}</li>
             <li>{{repo.updated_at}}</li>
-            <li>Project owner {{#if repo.fork}}{{parent.parent.owner.login}}{{else}}{{repo.owner.login}}{{/if}}</li>
         </ul>
     </div>
 {{/each}}
@@ -18,8 +18,9 @@ I began coding at age 12 when my friend and I started our own business making we
 <div id="gists">
 {{#each gists}}
     {{#if public}}
-    <div id="{{id}}" class="gist">
+    <div id="{{id}}" class="gist code">
         <ul>
+            <li><img src="{{owner.avatar_url}}">{{owner.login}}</li>
             <li>{{#each files}}{{filename}} {{/each}}</li>
             <li>{{description}}</li>
             <li>{{updated_at}}</li>
