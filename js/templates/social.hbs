@@ -6,8 +6,13 @@
 </div>
 <h2>Recent Tweets</h2>
 <div id = "feed">
-    <span id="loading">
-        <h3>Loading...</h3>
-        <img src="images/loading.gif" />
-    </span>
 </div>
+{{#each this}}
+<ul>
+    <li>{{created_at}}</li>
+    <li>{{text}}</li>
+    <li>{{user.name}}</li>
+    <li>{{user.profile_image_url}}</li>
+    <li>@{{user.screen_name}}</li>
+</ul>
+{{/each}}

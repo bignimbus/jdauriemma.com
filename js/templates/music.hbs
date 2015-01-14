@@ -3,8 +3,12 @@ I started playing music at age 9 and haven't looked back.  Below are some sample
 </p>
 <h2>My Jams</h2>
 <div id="playlist">
-    <span id="loading">
-        <h3>Loading...</h3>
-        <img src="../../images/loading.gif" />
-    </span>
 </div>
+{{#each this}}
+<ul>
+    <li>{{file}}</li>
+    <li>{{title}}</li>
+    <li>{{performer}}</li>
+    <li>{{role}}</li>
+</ul>
+{{/each}}

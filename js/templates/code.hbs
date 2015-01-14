@@ -2,6 +2,29 @@
 I began coding at age 12 when my friend and I started our own business making websites for local businesses.  Recently, I have added more advanced JavaScript, PHP, jQuery and Java ME skills to my repertoire.  Here are some recent projects of mine.
 </p>
 <h2>Repositories</h2>
-<div id="github"></div>
+<div id="repos">
+{{#each repos}}
+    <div id="{{repo.id}}" class="repo">
+        <ul>
+            <li>{{repo.name}}</li>
+            <li>{{repo.description}}</li>
+            <li>{{repo.updated_at}}</li>
+            <li>Project owner {{#if repo.fork}}{{parent.parent.owner.login}}{{else}}{{repo.owner.login}}{{/if}}</li>
+        </ul>
+    </div>
+{{/each}}
+</div>
 <h2>Gists</h2>
-<div id="gist"></div>
+<div id="gists">
+{{#each gists}}
+    {{#if public}}
+    <div id="{{id}}" class="gist">
+        <ul>
+            <li>{{#each files}}{{filename}} {{/each}}</li>
+            <li>{{description}}</li>
+            <li>{{updated_at}}</li>
+        </ul>
+    </div>
+    {{/if}}
+{{/each}}
+</div>
