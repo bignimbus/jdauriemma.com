@@ -1,7 +1,8 @@
-define([], function () {
+define(['models/tweet'],
+function (TweetModel) {
     'use strict';
     return Backbone.Collection.extend({
-        "model": Backbone.Model,
+        "model": TweetModel,
         "url": '../php/data/twitter.json',
         "parse": function (response) {
             return response;

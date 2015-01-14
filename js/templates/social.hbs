@@ -9,10 +9,13 @@
 </div>
 {{#each this}}
 <ul>
-    <li>{{created_at}}</li>
+    <li><a href="https://twitter.com/{{user.screen_name}}/status/{{id_str}}">{{formattedDate}}</a></li>
     <li>{{text}}</li>
-    <li>{{user.name}}</li>
-    <li>{{user.profile_image_url}}</li>
-    <li>@{{user.screen_name}}</li>
+    <li>{{originalUser.name}}</li>
+    <li><img src="{{originalUser.profile_image_url}}"></li>
+    <li>@{{originalUser.screen_name}}</li>
+    {{#each photos}}
+        <li><img src="{{media_url}}" width="{{sizes.small.w}}" height="{{sizes.small.h}}"></li>
+    {{/each}}
 </ul>
 {{/each}}
