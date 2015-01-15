@@ -3,20 +3,44 @@
   src: url('../fonts/mario/Super-Mario-Bros--3.woff'), url('../fonts/mario/Super-Mario-Bros-3?#iefix') format('embedded-opentype'), url('../myfont-webfont.woff') format('woff'), url('../fonts/mario/Super-Mario-Bros--3.ttf') format('truetype'), url('../fonts/mario/Super-Mario-Bros-3.svg#svgFontName') format('svg');
 }
 #music li,
-#social li {
+#social li,
+#code li {
   font-family: Monaco, Consolas, "Lucida Console", monospace;
 }
 #music ul,
-#social ul {
+#social ul,
+#code ul {
   list-style: none;
   padding: 0;
+}
+#social ul {
+  border-left: 1px solid #555;
+  margin-bottom: 2em;
+  padding-left: 1em;
+}
+#social .handle {
+  clear: none;
+  display: inline-block;
+  font-family: mario3;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  vertical-align: baseline;
+  width: 14em;
+}
+#code img {
+  height: 5%;
+  width: 5%;
 }
 html {
   height: 100%;
 }
 body {
   height: 100%;
-  background: gray;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #555;
 }
 #container {
   background: white;
@@ -35,6 +59,7 @@ header {
   text-align: center;
 }
 article {
+  height: auto;
   padding-left: 5em;
   padding-right: 5em;
 }

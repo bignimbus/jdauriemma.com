@@ -1,7 +1,15 @@
 define(['../../bower_components/handlebars/handlebars'], function(Handlebars) {
 
 return Handlebars.template({"1":function(depth0,helpers,partials,data) {
-  var stack1, helper, lambda=this.lambda, escapeExpression=this.escapeExpression, functionType="function", helperMissing=helpers.helperMissing, buffer = "<ul>\n    <li><a href=\"https://twitter.com/"
+  var stack1, helper, lambda=this.lambda, escapeExpression=this.escapeExpression, functionType="function", helperMissing=helpers.helperMissing, buffer = "<ul>\n    <li><img src=\""
+    + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.profile_image_url : stack1), depth0))
+    + "\"><a href=\"https://twitter.com/"
+    + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.name : stack1), depth0))
+    + "\"><span class=\"handle\">"
+    + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.name : stack1), depth0))
+    + " @"
+    + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.screen_name : stack1), depth0))
+    + "</span></a></li>\n    <li><a href=\"https://twitter.com/"
     + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.user : depth0)) != null ? stack1.screen_name : stack1), depth0))
     + "/status/"
     + escapeExpression(((helper = (helper = helpers.id_str || (depth0 != null ? depth0.id_str : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"id_str","hash":{},"data":data}) : helper)))
@@ -10,13 +18,7 @@ return Handlebars.template({"1":function(depth0,helpers,partials,data) {
     + "</a></li>\n    <li>";
   stack1 = ((helper = (helper = helpers.text || (depth0 != null ? depth0.text : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"text","hash":{},"data":data}) : helper));
   if (stack1 != null) { buffer += stack1; }
-  buffer += "</li>\n    <li>"
-    + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.name : stack1), depth0))
-    + "</li>\n    <li><img src=\""
-    + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.profile_image_url : stack1), depth0))
-    + "\"></li>\n    <li>@"
-    + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.screen_name : stack1), depth0))
-    + "</li>\n";
+  buffer += "</li>\n";
   stack1 = helpers.each.call(depth0, (depth0 != null ? depth0.photos : depth0), {"name":"each","hash":{},"fn":this.program(2, data),"inverse":this.noop,"data":data});
   if (stack1 != null) { buffer += stack1; }
   return buffer + "</ul>\n";
