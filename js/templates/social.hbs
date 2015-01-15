@@ -10,10 +10,10 @@
 {{#each this}}
 <ul>
     <li><img src="{{originalUser.profile_image_url}}"><a href="https://twitter.com/{{originalUser.name}}"><span class="handle">{{originalUser.name}} @{{originalUser.screen_name}}</span></a></li>
-    <li><a href="https://twitter.com/{{user.screen_name}}/status/{{id_str}}">{{formattedDate}}</a></li>
+    <li><a href="https://twitter.com/{{user.screen_name}}/status/{{id_str}}">{{format_date created_at 'ddd MMM D HH:mm:ss ZZ YYYY'}}</a></li>
     <li>{{{text}}}</li>
     {{#each photos}}
-        <li><img src="{{media_url}}" width="{{sizes.small.w}}" height="{{sizes.small.h}}"></li>
+        <li><img src="{{media_url}}" class="avatar"></li>
     {{/each}}
 </ul>
 {{/each}}
