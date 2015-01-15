@@ -10,7 +10,9 @@ module.exports = function (grunt) {
         "handlebars": {
             "options": {
                 "namespace": false,
-                "amd": ["../../bower_components/handlebars/handlebars"]
+                "amd": [
+                    "helper"
+                ]
             },
             "files": {
                 "expand": true,
