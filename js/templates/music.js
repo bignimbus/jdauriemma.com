@@ -1,4 +1,4 @@
-define(['../../bower_components/handlebars/handlebars'], function(Handlebars) {
+define(['helper'], function(Handlebars) {
 
 return Handlebars.template({"1":function(depth0,helpers,partials,data) {
   var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;

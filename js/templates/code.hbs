@@ -1,29 +1,38 @@
 <p>
 I began coding at age 12 when my friend and I started our own business making websites for local businesses.  Recently, I have added more advanced JavaScript, PHP, jQuery and Java ME skills to my repertoire.  Here are some recent projects of mine.
 </p>
-<h2>Repositories</h2>
 <div id="repos">
+<h2>Repos</h2>
 {{#each repos}}
     <div id="{{repo.id}}" class="repo code">
         <ul>
-            <li><img src="{{#if repo.fork}}{{#with parent.parent.owner}}{{avatar_url}}">{{login}}{{/with}}{{else}}{{repo.owner.avatar_url}}">{{repo.owner.login}}{{/if}}</li>
-            <li><a href="{{repo.html_url}}">{{repo.name}}</a></li>
+        {{#if repo.fork}}
+        {{#with parent.parent.owner}}
+            <li class="owner-info"><a href="https://github.com/{{login}}">{{login}}</a></li>
+            <li><a href="https://github.com/{{login}}"><img class="avatar" src="{{avatar_url}}"></a></li>
+        {{/with}}
+        {{else}}
+            <li class="owner-info"><a href="https://github.com/{{repo.owner.login}}">{{repo.owner.login}}</a></li>
+            <li><a href="https://github.com/{{repo.owner.login}}"><img class="avatar" src="{{repo.owner.avatar_url}}"></a></li>
+        {{/if}}
+            <li class="owner-info"><a href="{{repo.html_url}}">{{repo.name}}</a></li>
             <li>{{repo.description}}</li>
-            <li>{{repo.updated_at}}</li>
+            <li class="updated">Updated {{format_date repo.updated_at 'YYYY-MM-DD[T]HH:mm:ss[Z]'}}</li>
         </ul>
     </div>
 {{/each}}
 </div>
-<h2>Gists</h2>
 <div id="gists">
+<h2>Gists</h2>
 {{#each gists}}
     {{#if public}}
     <div id="{{id}}" class="gist code">
         <ul>
-            <li><img src="{{owner.avatar_url}}">{{owner.login}}</li>
-            <li>{{#each files}}{{filename}} {{/each}}</li>
+            <li class="owner-info">{{owner.login}}</li>
+            <li><a href="https://github.com/{{owner.login}}"><img class="avatar" src="{{owner.avatar_url}}"></a></li>
+            <li class="owner-info">{{#each files}}{{filename}} {{/each}}</li>
             <li>{{description}}</li>
-            <li>{{updated_at}}</li>
+            <li class="updated">Updated {{format_date updated_at 'YYYY-MM-DD[T]HH:mm:ss[Z]'}}</li>
         </ul>
     </div>
     {{/if}}
