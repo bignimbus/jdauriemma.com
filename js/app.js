@@ -1,3 +1,7 @@
+require.config({
+    "baseUrl": "js/"
+});
+
 require(['router'],
 function (Router) {
     'use strict';
