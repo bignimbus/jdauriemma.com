@@ -30,7 +30,9 @@ function (
         },
 
         "blog": function () {
-            this.view = this.view || new AppView();
+            this.view = this.view || new AppView({
+                "id": "blog"
+            });
             this.view.loading('Under Construction');
         },
 
