@@ -7,10 +7,10 @@ $twitterFile = fopen("data/twitter.json", "w") or die("Unable to open file!");
 
 
 // ENTER HERE YOUR CREDENTIALS (see readme.txt)
-$consumerKey = file_get_contents('../keys/twitter-consumer.txt');
-$consumerSecret = file_get_contents('../keys/twitter-consumer-secret.txt');
-$accessToken = file_get_contents('../keys/twitter-access.txt');
-$accessTokenSecret = file_get_contents('../keys/twitter-access-secret.txt');
+$consumerKey = file_get_contents('../access/twitter-consumer.txt');
+$consumerSecret = file_get_contents('../access/twitter-consumer-secret.txt');
+$accessToken = file_get_contents('../access/twitter-access.txt');
+$accessTokenSecret = file_get_contents('../access/twitter-access-secret.txt');
 
 $twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
 
