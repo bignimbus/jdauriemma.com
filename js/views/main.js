@@ -39,7 +39,7 @@ function (loadingTemplate) {
                 'landscape.jpg'
             ],
             random = Math.floor(Math.random() * images.length);
-            return 'url("../images/' + images[random] + '")';
+            return 'url("images/' + images[random] + '")';
         }
     });
 });
