@@ -1,3 +1,7 @@
 to do
 
-build github php api
+deploy to server
+re-map content on tumblr
+make tumblr api
+add icons for stars, forks, watch on github
+add icons for fav, retweet on twitter
