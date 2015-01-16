@@ -1,15 +1,14 @@
-<br/>
 <div class="network-icons">
-<a href="https://www.facebook.com/jdauriemma"><img src="images/facebook.png" class="network-icon"></a>
-<a href="https://www.twitter.com/jbones3000"><img src="images/twitter.png" class="network-icon"></a>
-<a href="http://www.linkedin.com/in/jeffreyauriemma/"><img src="images/linkedin.png" class="network-icon"></a>
+    <a href="https://www.facebook.com/jdauriemma"><img src="images/facebook.png" class="network-icon"></a>
+    <a href="https://www.twitter.com/jbones3000"><img src="images/twitter.png" class="network-icon"></a>
+    <a href="http://www.linkedin.com/in/jeffreyauriemma/"><img src="images/linkedin.png" class="network-icon"></a>
 </div>
 <h2>Recent Tweets</h2>
 <div id = "feed">
 </div>
 {{#each this}}
 <ul>
-    <li><img class="avatar" src="{{originalUser.profile_image_url}}"><a href="https://twitter.com/{{originalUser.name}}"><span class="handle">{{originalUser.name}}<br>@{{originalUser.screen_name}}</span></a></li>
+    <li><img class="avatar" src="{{originalUser.profile_image_url}}"><a href="https://twitter.com/{{originalUser.screen_name}}"><span class="handle">{{originalUser.name}}<br>@{{originalUser.screen_name}}</span></a></li>
     <li><a href="https://twitter.com/{{user.screen_name}}/status/{{id_str}}">{{format_date created_at 'ddd MMM D HH:mm:ss ZZ YYYY'}}</a></li>
     <li>{{{text}}}</li>
     {{#each photos}}

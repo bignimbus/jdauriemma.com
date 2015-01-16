@@ -4,7 +4,7 @@ return Handlebars.template({"1":function(depth0,helpers,partials,data) {
   var stack1, helper, lambda=this.lambda, escapeExpression=this.escapeExpression, functionType="function", helperMissing=helpers.helperMissing, buffer = "<ul>\n    <li><img class=\"avatar\" src=\""
     + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.profile_image_url : stack1), depth0))
     + "\"><a href=\"https://twitter.com/"
-    + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.name : stack1), depth0))
+    + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.screen_name : stack1), depth0))
     + "\"><span class=\"handle\">"
     + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.name : stack1), depth0))
     + "<br>@"
@@ -32,7 +32,7 @@ return Handlebars.template({"1":function(depth0,helpers,partials,data) {
     + escapeExpression(lambda(((stack1 = ((stack1 = (depth0 != null ? depth0.sizes : depth0)) != null ? stack1.small : stack1)) != null ? stack1.h : stack1), depth0))
     + "\"></li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-  var stack1, buffer = "<br/>\n<div class=\"network-icons\">\n<a href=\"https://www.facebook.com/jdauriemma\"><img src=\"images/facebook.png\" class=\"network-icon\"></a>\n<a href=\"https://www.twitter.com/jbones3000\"><img src=\"images/twitter.png\" class=\"network-icon\"></a>\n<a href=\"http://www.linkedin.com/in/jeffreyauriemma/\"><img src=\"images/linkedin.png\" class=\"network-icon\"></a>\n</div>\n<h2>Recent Tweets</h2>\n<div id = \"feed\">\n</div>\n";
+  var stack1, buffer = "<div class=\"network-icons\">\n    <a href=\"https://www.facebook.com/jdauriemma\"><img src=\"images/facebook.png\" class=\"network-icon\"></a>\n    <a href=\"https://www.twitter.com/jbones3000\"><img src=\"images/twitter.png\" class=\"network-icon\"></a>\n    <a href=\"http://www.linkedin.com/in/jeffreyauriemma/\"><img src=\"images/linkedin.png\" class=\"network-icon\"></a>\n</div>\n<h2>Recent Tweets</h2>\n<div id = \"feed\">\n</div>\n";
   stack1 = helpers.each.call(depth0, depth0, {"name":"each","hash":{},"fn":this.program(1, data),"inverse":this.noop,"data":data});
   if (stack1 != null) { buffer += stack1; }
   return buffer;
