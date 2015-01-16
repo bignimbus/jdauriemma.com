@@ -9,7 +9,7 @@
 </div>
 {{#each this}}
 <ul>
-    <li><img class="avatar" src="{{originalUser.profile_image_url}}"><a href="https://twitter.com/{{originalUser.name}}"><span class="handle">{{originalUser.name}} @{{originalUser.screen_name}}</span></a></li>
+    <li><img class="avatar" src="{{originalUser.profile_image_url}}"><a href="https://twitter.com/{{originalUser.name}}"><span class="handle">{{originalUser.name}}<br>@{{originalUser.screen_name}}</span></a></li>
     <li><a href="https://twitter.com/{{user.screen_name}}/status/{{id_str}}">{{format_date created_at 'ddd MMM D HH:mm:ss ZZ YYYY'}}</a></li>
     <li>{{{text}}}</li>
     {{#each photos}}

@@ -7,7 +7,7 @@ return Handlebars.template({"1":function(depth0,helpers,partials,data) {
     + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.name : stack1), depth0))
     + "\"><span class=\"handle\">"
     + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.name : stack1), depth0))
-    + " @"
+    + "<br>@"
     + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.originalUser : depth0)) != null ? stack1.screen_name : stack1), depth0))
     + "</span></a></li>\n    <li><a href=\"https://twitter.com/"
     + escapeExpression(lambda(((stack1 = (depth0 != null ? depth0.user : depth0)) != null ? stack1.screen_name : stack1), depth0))

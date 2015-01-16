@@ -1,6 +1,6 @@
 to do
 
-deploy to server
+remove inline styles
 re-map content on tumblr
 make tumblr api
 add icons for stars, forks, watch on github
