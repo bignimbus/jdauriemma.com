@@ -1,10 +1,9 @@
 <?php
 
-require_once './twitter-php-master/src/twitter.class.php';
+require_once 'twitter-php-master/src/twitter.class.php';
 $twitterFile = fopen("data/twitter.json", "w") or die("Unable to open file!");
 // enables caching (path must exists and must be writable!)
 // Twitter::$cacheDir = dirname(__FILE__) . '/temp';
-
 
 // ENTER HERE YOUR CREDENTIALS (see readme.txt)
 $consumerKey = file_get_contents('../access/twitter-consumer.txt');
