@@ -65,6 +65,15 @@
   margin-right: 0.5em;
   vertical-align: baseline;
 }
+#social .network-icons {
+  margin: 0 auto;
+  padding-top: 1em;
+  text-align: center;
+}
+#social .network-icon {
+  display: inline-block;
+  margin: 0 1em 1em 1em;
+}
 .avatar {
   height: 48px;
   width: 48px;
