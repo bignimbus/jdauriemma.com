@@ -26,11 +26,12 @@ function (
         },
 
         "defaultRoute": function () {
-            this.music();
+            this.code();
         },
 
         "blog": function () {
-
+            this.view = this.view || new AppView();
+            this.view.loading('Under Construction');
         },
 
         "code": function () {
@@ -57,7 +58,7 @@ function (
             }, collection);
         },
 
-        "loadPage": function (opts, collection) {
+        "loadPage": function (opts, collection, message) {
             opts = opts || {};
 
             this.view = new AppView(opts);

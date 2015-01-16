@@ -5,15 +5,17 @@ function (loadingTemplate) {
         "el": "article",
         "id": null,
         "initialize": function (options) {
-            this.template = options.template;
+            this.template = options && options.template;
             this.setBackground();
         },
         "render": function (collection) {
             this.$el.html(this.template(this.getContext(collection)));
             this.$el.prop('id', this.id);
         },
-        "loading": function () {
-            this.$el.html(loadingTemplate);
+        "loading": function (message) {
+            this.$el.html(loadingTemplate({
+                "message": message || "Loading..."
+            }));
         },
         "getContext": function (collection) {
             collection = collection.toJSON();
