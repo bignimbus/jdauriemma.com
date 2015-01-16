@@ -1,6 +1,6 @@
 to do
 
-remove inline styles
+true active states
 re-map content on tumblr
 make tumblr api
 add icons for stars, forks, watch on github

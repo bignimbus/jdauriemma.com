@@ -127,29 +127,31 @@ a {
 	&.menuitem {
 		color: #000;
 		text-decoration: none;
-	}
-
-	&.menuitem:before {
-		content: url('../images/blank.png');
-		display:inline-block;
-		position: relative;
-		width: 1.31em;
-	}
-
-	&.menuitem:hover:before {
-		content: url('../images/arrow.png');
-		display:inline-block;
-		position: relative;
-	}
-
-	&.menuitem:active:before {
-		content: url('../images/arrow.png');
-		display:inline-block;
-		position: relative;
-	}
-
-	&.git:hover {
-		text-decoration: underline;
+		&:before {
+			border-right: 0;
+			border-top: 13px solid transparent;
+			border-bottom: 13px solid transparent;
+			border-left: 20px solid #000;
+			content: '';
+			display: inline-block;
+			height: 0;
+			visibility: hidden;
+			width: 0;
+		}
+		&.active:before,
+		&:active:before,
+		&:hover:before,
+		&:focus:before {
+			border-right: 0;
+			border-top: 13px solid transparent;
+			border-bottom: 13px solid transparent;
+			border-left: 20px solid #000;
+			content: '';
+			display: inline-block;
+			height: 0;
+			visibility: visible;
+			width: 0;
+		}
 	}
 }
 

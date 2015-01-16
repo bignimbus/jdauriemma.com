@@ -194,23 +194,29 @@ a.menuitem {
   text-decoration: none;
 }
 a.menuitem:before {
-  content: url('../images/blank.png');
+  border-right: 0;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 20px solid #000;
+  content: '';
   display: inline-block;
-  position: relative;
-  width: 1.31em;
+  height: 0;
+  visibility: hidden;
+  width: 0;
 }
-a.menuitem:hover:before {
-  content: url('../images/arrow.png');
+a.menuitem.active:before,
+a.menuitem:active:before,
+a.menuitem:hover:before,
+a.menuitem:focus:before {
+  border-right: 0;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 20px solid #000;
+  content: '';
   display: inline-block;
-  position: relative;
-}
-a.menuitem:active:before {
-  content: url('../images/arrow.png');
-  display: inline-block;
-  position: relative;
-}
-a.git:hover {
-  text-decoration: underline;
+  height: 0;
+  visibility: visible;
+  width: 0;
 }
 h1 {
   font-family: mario3;
