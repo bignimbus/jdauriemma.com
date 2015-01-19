@@ -14,7 +14,6 @@ function (navTemplate) {
         },
         "toggleActive": function (e) {
             this.$('.menuitem').removeClass('active');
-            debugger;
             this.$(e.currentTarget.hash).addClass('active');
         }
     });
