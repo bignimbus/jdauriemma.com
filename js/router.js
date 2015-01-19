@@ -1,11 +1,11 @@
 define([
     'views/main',
-    'collections/songs', 'collections/tweets', 'collections/github',
+    'collections/songs', 'collections/tweets', 'collections/github', 'collections/blog-posts',
     'templates/music', 'templates/social', 'templates/code'
 ],
 function (
     AppView,
-    SongCollection, TweetCollection, GithubCollection,
+    SongCollection, TweetCollection, GithubCollection, BlogCollection,
     musicTemplate, socialTemplate, codeTemplate
 ) {
     'use strict';
