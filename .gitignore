@@ -31,7 +31,6 @@ node_modules/
 bower_components/
 keys/
 access/
-php/data/
 .htaccess
 
 #################
