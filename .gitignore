@@ -32,6 +32,7 @@ bower_components/
 keys/
 access/
 php/data/
+.htaccess
 
 #################
 ## Visual Studio
