@@ -1,14 +1,14 @@
 define([
-    'views/main',
+    'views/main', 'views/blog',
     'collections/songs', 'collections/tweets', 'collections/blog-posts',
     'models/github',
-    'templates/music', 'templates/social', 'templates/code', 'templates/blog-post'
+    'templates/music', 'templates/social', 'templates/code'
 ],
 function (
-    AppView,
+    AppView, BlogView,
     SongCollection, TweetCollection, BlogCollection,
     GithubModel,
-    musicTemplate, socialTemplate, codeTemplate, blogTemplate
+    musicTemplate, socialTemplate, codeTemplate
 ) {
     'use strict';
 
@@ -34,10 +34,9 @@ function (
         "blog": function () {
             var collection = new BlogCollection();
             this.loadPage({
-                "model": collection,
-                "template": blogTemplate,
+                "collection": collection,
                 "id": "blog"
-            });
+            }, BlogView);
         },
 
         "code": function () {
@@ -67,16 +66,23 @@ function (
             });
         },
 
-        "loadPage": function (opts, collection, message) {
-            opts = opts || {};
+        "archive": function () {
 
-            this.view = new AppView(opts);
+        },
+
+        "loadPage": function (opts, View) {
+            opts = opts || {};
+            View = View || AppView;
+            var success,
+                data = opts.model || opts.collection || null;
+
+            this.view = new View(opts);
             this.view.loading();
 
-            var success = _.bind(function () {
+            success = _.bind(function () {
                 this.view.render();
             }, this);
-            opts.model.fetch({
+            data.fetch({
                 "success": success
             });
         }
