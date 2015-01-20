@@ -74,6 +74,9 @@
   display: inline-block;
   margin: 0 1em 1em 1em;
 }
+#blog nav {
+  display: flex;
+}
 .avatar {
   height: 48px;
   width: 48px;
