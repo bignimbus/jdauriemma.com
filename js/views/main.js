@@ -9,20 +9,14 @@ function (loadingTemplate) {
             this.setBackground();
         },
         "render": function (collection) {
-            this.$el.html(this.template(this.getContext(collection)));
+            console.log(this.model.toJSON());
+            this.$el.html(this.template(this.model.toJSON()));
             this.$el.prop('id', this.id);
         },
         "loading": function (message) {
             this.$el.html(loadingTemplate({
                 "message": message || "Loading..."
             }));
-        },
-        "getContext": function (collection) {
-            collection = collection.toJSON();
-            if (_.isArray(collection) && collection.length === 1) {
-                return collection[0];
-            }
-            return collection;
         },
         "setBackground": function () {
             var $body = $('body');

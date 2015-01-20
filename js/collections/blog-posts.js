@@ -4,7 +4,7 @@ define([], function () {
         "model": Backbone.Model,
         "url": 'php/data/tumblr.json',
         "parse": function (response) {
-            return response;
+            return response.posts;
         }
     });
 });

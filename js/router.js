@@ -1,12 +1,14 @@
 define([
     'views/main',
-    'collections/songs', 'collections/tweets', 'collections/github', 'collections/blog-posts',
-    'templates/music', 'templates/social', 'templates/code'
+    'collections/songs', 'collections/tweets', 'collections/blog-posts',
+    'models/github',
+    'templates/music', 'templates/social', 'templates/code', 'templates/blog-post'
 ],
 function (
     AppView,
-    SongCollection, TweetCollection, GithubCollection, BlogCollection,
-    musicTemplate, socialTemplate, codeTemplate
+    SongCollection, TweetCollection, BlogCollection,
+    GithubModel,
+    musicTemplate, socialTemplate, codeTemplate, blogTemplate
 ) {
     'use strict';
 
@@ -30,34 +32,39 @@ function (
         },
 
         "blog": function () {
-            this.view = this.view || new AppView({
+            var collection = new BlogCollection();
+            this.loadPage({
+                "model": collection,
+                "template": blogTemplate,
                 "id": "blog"
             });
-            this.view.loading('Under Construction');
         },
 
         "code": function () {
-            var collection = new GithubCollection();
+            var model = new GithubModel();
             this.loadPage({
+                "model": model,
                 "template": codeTemplate,
                 "id": "code"
-            }, collection);
+            });
         },
 
         "music": function () {
             var collection = new SongCollection();
             this.loadPage({
+                "model": collection,
                 "template": musicTemplate,
                 "id": "music"
-            }, collection);
+            });
         },
 
         "social": function () {
             var collection = new TweetCollection();
             this.loadPage({
+                "model": collection,
                 "template": socialTemplate,
                 "id": "social"
-            }, collection);
+            });
         },
 
         "loadPage": function (opts, collection, message) {
@@ -67,9 +74,9 @@ function (
             this.view.loading();
 
             var success = _.bind(function () {
-                this.view.render(collection);
+                this.view.render();
             }, this);
-            collection.fetch({
+            opts.model.fetch({
                 "success": success
             });
         }
