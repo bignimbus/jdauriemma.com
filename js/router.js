@@ -15,7 +15,9 @@ function (
     return Backbone.Router.extend({
         "routes": {
             '': 'defaultRoute',
-            'blog': 'blog',
+            'blog': 'blogPost',
+            'blog_:slug': 'blogPost',
+            'archive': 'archive',
             'code': 'code',
             'music': 'music',
             'social': 'social'
@@ -31,12 +33,40 @@ function (
             this.code();
         },
 
-        "blog": function () {
-            var collection = new BlogCollection();
-            this.loadPage({
-                "collection": collection,
-                "id": "blog"
-            }, BlogView);
+        "blogPost": function (slug) {
+            debugger;
+            if (!this.blogCollection || !this.blogView) {
+                this.loadBlog(_.bind(function () {
+                    this.blogView.render(slug);
+                }, this));
+            } else {
+                this.blogView.loading();
+                this.blogView.render(slug);
+            }
+        },
+
+        "archive": function () {
+            if (!this.blogCollection || !this.blogView) {
+                this.loadBlog(_.bind(function () {
+                    this.blogView.renderArchive();
+                }, this));
+            } else {
+                this.blogView.loading();
+                this.blogView.renderArchive();
+            }
+        },
+
+        "loadBlog": function (success) {
+            this.blogCollection = new BlogCollection();
+            this.blogView = new BlogView({
+                "collection": this.blogCollection,
+                "id": "blog",
+                "router": this
+            });
+            this.blogView.loading();
+            this.blogCollection.fetch({
+                "success": success
+            });
         },
 
         "code": function () {
@@ -66,17 +96,12 @@ function (
             });
         },
 
-        "archive": function () {
-
-        },
-
-        "loadPage": function (opts, View) {
+        "loadPage": function (opts) {
             opts = opts || {};
-            View = View || AppView;
             var success,
                 data = opts.model || opts.collection || null;
 
-            this.view = new View(opts);
+            this.view = new AppView(opts);
             this.view.loading();
 
             success = _.bind(function () {

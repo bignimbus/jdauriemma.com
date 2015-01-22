@@ -1,5 +1,8 @@
 <div class="post-list">
-{{#each this}}
-    <a href="#">{{regular-title}}</a>
-{{/each}}
+    <h2>{{title}}</h2>
+    <ul>
+    {{#each this}}
+        <li><a href="blog_{{slug}}">{{regular-title}}</a></li>
+    {{/each}}
+    </ul>
 </div>

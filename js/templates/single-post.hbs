@@ -1,8 +1,20 @@
-<nav class="top">
-    <a href="#">archive</a> <a href="#">previous post</a>
+<nav class="blog">
+    <div><a href="{{prev}}" class="prev">prev</a></div>
+    <div><a href="/archive">archive</a></div>
+    <div><a href="{{next}}" class="next">next</a></div>
 </nav>
 <div id="entries">
     <h2><a href="#">{{regular-title}}</a></h2>
+    <h4>published {{format_date unix-timestamp 'X'}}</h4>
+    <div class="tags">
+    {{#each tags}}
+        <span class="tag">#{{this}}</span>
+    {{/each}}
+    </div>
     {{{regular-body}}}
 </div>
-<nav class="bottom">
+<nav class="blog">
+    <div><a href="prev">previous</a></div>
+    <div><a href="/archive">archive</a></div>
+    <div><a href="next">next</a></div>
+</nav>

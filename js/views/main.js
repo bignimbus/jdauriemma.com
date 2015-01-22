@@ -1,19 +1,21 @@
-define(['templates/loading'],
-function (loadingTemplate) {
+define(['templates/loading', 'router'],
+function (loadingTemplate, router) {
     'use strict';
     return Backbone.View.extend({
         "el": "article",
         "id": null,
+        "isLoading": false,
         "initialize": function (options) {
+            this.router = router;
             this.template = options && options.template;
             this.setBackground();
         },
         "render": function (collection) {
-            console.log(this.model.toJSON());
             this.$el.html(this.template(this.model.toJSON()));
             this.$el.prop('id', this.id);
         },
         "loading": function (message) {
+            this.isLoading = true;
             this.$el.html(loadingTemplate({
                 "message": message || "Loading..."
             }));

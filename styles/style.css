@@ -74,8 +74,34 @@
   display: inline-block;
   margin: 0 1em 1em 1em;
 }
+#blog h4,
+#blog h5,
+#blog h6 {
+  font-family: mario3;
+}
 #blog nav {
+  clear: both;
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+#blog nav.blog div a {
+  color: #000;
+  font-family: mario3;
+}
+#blog nav ul {
+  list-style: none;
+}
+#blog .tags {
+  margin-bottom: 1em;
+}
+#blog .tags .tag {
+  background: #ddd;
+  font-family: mario3;
+  font-size: 0.6em;
+  margin-right: 1em;
+  letter-spacing: -0.1em;
+  white-space: nowrap;
 }
 .avatar {
   height: 48px;
@@ -112,6 +138,9 @@ article {
   height: auto;
   padding-left: 5em;
   padding-right: 5em;
+}
+article a:hover {
+  text-decoration: underline;
 }
 div {
   margin: 0 auto;
