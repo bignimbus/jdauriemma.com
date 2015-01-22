@@ -97,11 +97,47 @@
 }
 #blog .tags .tag {
   background: #ddd;
+  color: #000;
   font-family: mario3;
   font-size: 0.6em;
   margin-right: 1em;
   letter-spacing: -0.1em;
   white-space: nowrap;
+}
+#blog .post-list ul {
+  clear: both;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+#blog .post-list ul li {
+  clear: none;
+  float: left;
+  display: inline-block;
+}
+#blog .post-list ul .hero {
+  height: 10em;
+  position: relative;
+  width: 10em;
+}
+#blog .post-list ul .hero img {
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+  width: auto;
+}
+#blog .post-list ul .text {
+  margin-left: 1em;
+  position: relative;
+  vertical-align: top;
+  width: 29em;
+}
+#blog .post-list ul .text p,
+#blog .post-list ul .text h4 {
+  margin: 0;
+  padding: 0;
+  width: 29em;
 }
 .avatar {
   height: 48px;

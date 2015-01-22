@@ -14,10 +14,11 @@ function (AppView, singlePostTemplate, blogListTemplate, router) {
             })));
             this.$el.prop('id', this.id);
         },
-        "renderArchive": function () {
+        "renderArchive": function (tag) {
+            var posts = tag ? this.getPostsWith(tag) : this.collection;
             this.$el.html(blogListTemplate($.extend({}, {
-                "title": "Archive"
-            }, this.collection.toJSON())));
+                "title": tag ? "Posts with #" + tag : "Archive"
+            }, posts.toJSON())));
             this.$el.prop('id', this.id);
         },
         "getPost": function (slug) {
@@ -25,6 +26,12 @@ function (AppView, singlePostTemplate, blogListTemplate, router) {
                 "slug": slug
             }) || this.collection.at(0);
             return post.toJSON();
+        },
+        "getPostsWith": function (tag) {
+            var posts = this.collection.filter(function (model) {
+                return _.contains(model.get('tags'), tag);
+            });
+            return new Backbone.Collection(posts);
         },
         "getPrevious": function () {
             var i = this.collection.indexOf(this.collection.findWhere({

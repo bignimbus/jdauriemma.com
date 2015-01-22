@@ -15,7 +15,9 @@ module.exports = function (grunt) {
                 "namespace": false,
                 "amd": [
                     "helper"
-                ]
+                ],
+                "partialRegex": /.*/,
+                "partialsPathRegex": /js\/partials\//
             },
             "files": {
                 "expand": true,
@@ -27,7 +29,7 @@ module.exports = function (grunt) {
             "server": {
                 "rules": [
                     // Internal rewrite
-                    {"from": '^/', "to": './'},
+                    {"from": '^/', "to": './'}
                     // Internal rewrite
                     // {"from": '^/js/(.*)$', "to": '/src/js/$1'},
                 ],

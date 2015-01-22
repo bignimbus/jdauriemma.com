@@ -2,9 +2,11 @@ define(['helper'], function(Handlebars) {
 
 return Handlebars.template({"1":function(depth0,helpers,partials,data) {
   var lambda=this.lambda, escapeExpression=this.escapeExpression;
-  return "        <span class=\"tag\">#"
+  return "        <a class=\"tag\" href=\"archive_"
     + escapeExpression(lambda(depth0, depth0))
-    + "</span>\n";
+    + "\">#"
+    + escapeExpression(lambda(depth0, depth0))
+    + "</a>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
   var stack1, helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, buffer = "<nav class=\"blog\">\n    <div><a href=\""
     + escapeExpression(((helper = (helper = helpers.prev || (depth0 != null ? depth0.prev : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"prev","hash":{},"data":data}) : helper)))
@@ -20,7 +22,11 @@ return Handlebars.template({"1":function(depth0,helpers,partials,data) {
   buffer += "    </div>\n    ";
   stack1 = ((helper = (helper = helpers['regular-body'] || (depth0 != null ? depth0['regular-body'] : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"regular-body","hash":{},"data":data}) : helper));
   if (stack1 != null) { buffer += stack1; }
-  return buffer + "\n</div>\n<nav class=\"blog\">\n    <div><a href=\"prev\">previous</a></div>\n    <div><a href=\"/archive\">archive</a></div>\n    <div><a href=\"next\">next</a></div>\n</nav>";
+  return buffer + "\n</div>\n<nav class=\"blog\">\n    <div><a href=\""
+    + escapeExpression(((helper = (helper = helpers.prev || (depth0 != null ? depth0.prev : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"prev","hash":{},"data":data}) : helper)))
+    + "\" class=\"prev\">prev</a></div>\n    <div><a href=\"/archive\">archive</a></div>\n    <div><a href=\""
+    + escapeExpression(((helper = (helper = helpers.next || (depth0 != null ? depth0.next : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"next","hash":{},"data":data}) : helper)))
+    + "\" class=\"next\">next</a></div>\n</nav>";
 },"useData":true})
 
 });

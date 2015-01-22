@@ -17,6 +17,7 @@ function (
             '': 'defaultRoute',
             'blog': 'blogPost',
             'blog_:slug': 'blogPost',
+            'archive_:tag': 'archive',
             'archive': 'archive',
             'code': 'code',
             'music': 'music',
@@ -34,7 +35,6 @@ function (
         },
 
         "blogPost": function (slug) {
-            debugger;
             if (!this.blogCollection || !this.blogView) {
                 this.loadBlog(_.bind(function () {
                     this.blogView.render(slug);
@@ -45,14 +45,14 @@ function (
             }
         },
 
-        "archive": function () {
+        "archive": function (tag) {
             if (!this.blogCollection || !this.blogView) {
                 this.loadBlog(_.bind(function () {
-                    this.blogView.renderArchive();
+                    this.blogView.renderArchive(tag);
                 }, this));
             } else {
                 this.blogView.loading();
-                this.blogView.renderArchive();
+                this.blogView.renderArchive(tag);
             }
         },
 

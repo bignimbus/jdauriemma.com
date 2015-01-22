@@ -8,13 +8,13 @@
     <h4>published {{format_date unix-timestamp 'X'}}</h4>
     <div class="tags">
     {{#each tags}}
-        <span class="tag">#{{this}}</span>
+        <a class="tag" href="archive_{{this}}">#{{this}}</a>
     {{/each}}
     </div>
     {{{regular-body}}}
 </div>
 <nav class="blog">
-    <div><a href="prev">previous</a></div>
+    <div><a href="{{prev}}" class="prev">prev</a></div>
     <div><a href="/archive">archive</a></div>
-    <div><a href="next">next</a></div>
+    <div><a href="{{next}}" class="next">next</a></div>
 </nav>

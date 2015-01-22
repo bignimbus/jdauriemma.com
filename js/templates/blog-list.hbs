@@ -1,8 +1,12 @@
 <div class="post-list">
     <h2>{{title}}</h2>
-    <ul>
     {{#each this}}
-        <li><a href="blog_{{slug}}">{{regular-title}}</a></li>
-    {{/each}}
+    <ul>
+        <li class="hero">{{{heroImage}}}</li>
+        <li class="text"><a href="blog_{{slug}}">
+            <h4>{{regular-title}}</h4></a>
+            <p>{{{snippet}}}</p>
+        </li>
     </ul>
+    {{/each}}
 </div>
