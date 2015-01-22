@@ -92,6 +92,11 @@
 #blog nav ul {
   list-style: none;
 }
+#blog #entries img {
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
 #blog .tags {
   margin-bottom: 1em;
 }
