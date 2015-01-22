@@ -1,5 +1,5 @@
 require.config({
-    "baseUrl": "js/"
+    "baseUrl": "./js/"
 });
 require(['router', 'views/nav'],
 function (Router, NavigationView) {
@@ -7,7 +7,7 @@ function (Router, NavigationView) {
     var app = {},
         navbar = new NavigationView();
     app.router = new Router();
-    Backbone.history.start({"pushState": true});
+    Backbone.history.start({"pushState": true, "root": "./"});
     $(document).on('click', 'a:not([data-bypass])', function (evt) {
         var href = $(this).attr('href'),
             protocol = this.protocol + '//';
