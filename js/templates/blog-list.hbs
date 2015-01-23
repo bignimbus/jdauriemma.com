@@ -1,6 +1,6 @@
 <div class="post-list">
     <h2>{{title}}</h2>
-    {{#each this}}
+    {{#each this}}{{#if regular-title}}
     <ul>
         <li class="hero">{{{heroImage}}}</li>
         <li class="text"><a href="blog_{{slug}}">
@@ -8,5 +8,5 @@
             <p>{{{snippet}}}</p>
         </li>
     </ul>
-    {{/each}}
+    {{/if}}{{/each}}
 </div>
