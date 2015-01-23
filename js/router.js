@@ -31,7 +31,7 @@ function (
         },
 
         "defaultRoute": function () {
-            this.code();
+            this.blogPost();
         },
 
         "blogPost": function (slug) {
