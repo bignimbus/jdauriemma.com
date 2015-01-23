@@ -38,6 +38,9 @@ article {
 			text-decoration: underline;
 		}
 	}
+	li {
+		font-family: Monaco, Consolas, "Lucida Console", monospace;
+	}
 	height: auto;
 	padding-left:5em;
 	padding-right:5em;
@@ -156,6 +159,38 @@ a {
 			height: 0;
 			visibility: visible;
 			width: 0;
+		}
+		&#blog {
+			&.active:before,
+			&:active:before,
+			&:hover:before,
+			&:focus:before {
+				border-left: 20px solid red;
+			}
+		}
+		&#code {
+			&.active:before,
+			&:active:before,
+			&:hover:before,
+			&:focus:before {
+				border-left: 20px solid blue;
+			}
+		}
+		&#music {
+			&.active:before,
+			&:active:before,
+			&:hover:before,
+			&:focus:before {
+				border-left: 20px solid green;
+			}
+		}
+		&#social {
+			&.active:before,
+			&:active:before,
+			&:hover:before,
+			&:focus:before {
+				border-left: 20px solid orange;
+			}
 		}
 	}
 }

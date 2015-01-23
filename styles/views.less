@@ -115,33 +115,33 @@
     .post-list {
         ul {
             clear: both;
+            display: table;
             list-style: none;
             margin-left: 0;
             padding-left: 0;
+            &:hover {
+                background: #ddd;
+            }
             li {
                 clear: none;
-                float: left;
-                display: inline-block;
+                display: table-cell;
             }
             .hero {
                 height: 10em;
-                position: relative;
                 width: 10em;
                 img {
                     height: auto;
                     max-height: 100%;
                     max-width: 100%;
-                    position: relative;
                     width: auto;
                 }
             }
             .text {
-                margin-left: 1em;
-                position: relative;
+                padding-left: 1em;
                 vertical-align: top;
                 width: 29em;
                 p, h4 {
-                    margin: 0;
+                    margin: 0.2em 0 0 0;
                     padding: 0;
                     width: 29em;
                 }

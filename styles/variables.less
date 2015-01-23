@@ -6,3 +6,10 @@ src: url('../fonts/mario/Super-Mario-Bros--3.woff'),
      url('../fonts/mario/Super-Mario-Bros--3.ttf')  format('truetype'),
      url('../fonts/mario/Super-Mario-Bros-3.svg#svgFontName') format('svg');
 }
+
+.colorize {
+    &:active,
+    &:hover {
+        background: color(`['orange', 'red', 'green', 'blue'][Math.floor(Math.random() * 4)]`);
+    }
+}

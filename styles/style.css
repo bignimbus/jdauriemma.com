@@ -2,6 +2,10 @@
   font-family: mario3;
   src: url('../fonts/mario/Super-Mario-Bros--3.woff'), url('../fonts/mario/Super-Mario-Bros-3?#iefix') format('embedded-opentype'), url('../myfont-webfont.woff') format('woff'), url('../fonts/mario/Super-Mario-Bros--3.ttf') format('truetype'), url('../fonts/mario/Super-Mario-Bros-3.svg#svgFontName') format('svg');
 }
+.colorize:active,
+.colorize:hover {
+  background: #ffa500;
+}
 #music li,
 #social li,
 #code li {
@@ -111,36 +115,36 @@
 }
 #blog .post-list ul {
   clear: both;
+  display: table;
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
+#blog .post-list ul:hover {
+  background: #ddd;
+}
 #blog .post-list ul li {
   clear: none;
-  float: left;
-  display: inline-block;
+  display: table-cell;
 }
 #blog .post-list ul .hero {
   height: 10em;
-  position: relative;
   width: 10em;
 }
 #blog .post-list ul .hero img {
   height: auto;
   max-height: 100%;
   max-width: 100%;
-  position: relative;
   width: auto;
 }
 #blog .post-list ul .text {
-  margin-left: 1em;
-  position: relative;
+  padding-left: 1em;
   vertical-align: top;
   width: 29em;
 }
 #blog .post-list ul .text p,
 #blog .post-list ul .text h4 {
-  margin: 0;
+  margin: 0.2em 0 0 0;
   padding: 0;
   width: 29em;
 }
@@ -182,6 +186,9 @@ article {
 }
 article a:hover {
   text-decoration: underline;
+}
+article li {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
 }
 div {
   margin: 0 auto;
@@ -290,6 +297,30 @@ a.menuitem:focus:before {
   height: 0;
   visibility: visible;
   width: 0;
+}
+a.menuitem#blog.active:before,
+a.menuitem#blog:active:before,
+a.menuitem#blog:hover:before,
+a.menuitem#blog:focus:before {
+  border-left: 20px solid red;
+}
+a.menuitem#code.active:before,
+a.menuitem#code:active:before,
+a.menuitem#code:hover:before,
+a.menuitem#code:focus:before {
+  border-left: 20px solid blue;
+}
+a.menuitem#music.active:before,
+a.menuitem#music:active:before,
+a.menuitem#music:hover:before,
+a.menuitem#music:focus:before {
+  border-left: 20px solid green;
+}
+a.menuitem#social.active:before,
+a.menuitem#social:active:before,
+a.menuitem#social:hover:before,
+a.menuitem#social:focus:before {
+  border-left: 20px solid orange;
 }
 h1 {
   font-family: mario3;
