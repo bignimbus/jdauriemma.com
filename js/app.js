@@ -9,10 +9,10 @@ function (Router, NavigationView) {
         opts = {"pushState": true};
 
     if (window.rootDir.indexOf('home') > -1) {
-        $.extend(opts, {"root": window.rootDir});
+        opts = $.extend({}, opts, {"root": window.rootDir});
     }
     app.router = new Router();
-    Backbone.history.start({"pushState": true, "root": window.rootDir});
+    Backbone.history.start(opts);
     $(document).on('click', 'a:not([data-bypass])', function (evt) {
         var href = $(this).attr('href'),
             protocol = this.protocol + '//';
