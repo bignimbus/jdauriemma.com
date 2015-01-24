@@ -5,6 +5,11 @@
 	<?php
 		echo "<script>window.rootDir = \"".dirname(__FILE__)."\";</script>";
 	?>
+	<script>
+		if (window.rootDir.indexOf('_html')) {
+			window.rootDir = window.rootDir.slice(window.rootDir.indexOf('_html') + 6);
+		}
+	</script>
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/underscore/underscore-min.js"></script>
 	<script src="bower_components/backbone/backbone.js"></script>
