@@ -3,7 +3,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="styles/style.css" />
 	<?php
-		echo '<script>window.rootDir = "'.__DIR__.'";</script>';
+		echo "<script>window.rootDir = \"".__DIR__."\";</script>";
 	?>
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/underscore/underscore-min.js"></script>
