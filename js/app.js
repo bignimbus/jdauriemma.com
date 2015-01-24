@@ -9,7 +9,7 @@ function (Router, NavigationView) {
         opts = {"pushState": true};
 
     if (window.rootDir.indexOf('home') === -1) {
-        opts = $.extend({}, opts, {"root": './' + window.rootDir});
+        opts = $.extend({}, opts, {"root": window.rootDir});
     }
     app.router = new Router();
     Backbone.history.start(opts);
