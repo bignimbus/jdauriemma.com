@@ -1,6 +1,5 @@
 to do
 
 catch typos and formatting bugs in tumblr posts
-refactor github collection to model containing two collections
 add icons for stars, forks, watch on github
 add icons for fav, retweet on twitter

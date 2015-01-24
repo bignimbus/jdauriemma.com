@@ -35,22 +35,23 @@
 	<meta name="description" content="Likes JavaScript and Music">
 	<meta name="keywords" content="music, teaching, teacher, chicago, new jersey, programmer, javascript, html">
 	<meta name="author" content="Jeffrey Auriemma">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div id="container">
 	<header>
 		<hgroup>
 			<div class = "left">
-				<img src = "images/skylineleft.png" style="width:16em; height:5em;">
+				<img src = "images/skylineleft.png">
 			</div>
 			<div class = "center">
 					<h1>
 					Jeffrey<br/>
 					Auriemma
 					</h1>
-				</div>
+			</div>
 			<div class = "right">
-				<img src = "images/skylineright.png" style="width:16em; height:5em;">
+				<img src = "images/skylineright.png">
 			</div>
 		</hgroup>
 	</header>

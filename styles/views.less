@@ -106,7 +106,7 @@
             background: #ddd;
             color: #000;
             font-family: mario3;
-            font-size: 0.6em;
+            font-size: 0.8rem;
             margin-right: 1em;
             letter-spacing: -0.1em;
             white-space: nowrap;
@@ -114,21 +114,23 @@
     }
     .post-list {
         ul {
+            border-left: 0.1em solid #555;
             clear: both;
             display: table;
             list-style: none;
             margin-left: 0;
-            padding-left: 0;
+            padding-left: 0.2em;
             &:hover {
                 background: #ddd;
             }
             li {
                 clear: none;
                 display: table-cell;
+                margin-top: 0.5em;
             }
             .hero {
-                height: 10em;
-                width: 10em;
+                max-height: 10em;
+                width: 25%;
                 img {
                     height: auto;
                     max-height: 100%;
@@ -139,11 +141,11 @@
             .text {
                 padding-left: 1em;
                 vertical-align: top;
-                width: 29em;
+                width: 75%;
                 p, h4 {
                     margin: 0.2em 0 0 0;
                     padding: 0;
-                    width: 29em;
+                    // width: 100%;
                 }
             }
         }

@@ -8,7 +8,8 @@ function (Router, NavigationView) {
         navbar = new NavigationView(),
         opts = {"pushState": true};
 
-    if (window.rootDir.indexOf('home') === -1) {
+    if (window.rootDir.indexOf('home') === -1
+    && window.rootDir.indexOf('personal') === -1) {
         opts = $.extend({}, opts, {"root": window.rootDir});
     }
     app.router = new Router();
