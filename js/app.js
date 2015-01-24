@@ -5,7 +5,12 @@ require(['router', 'views/nav'],
 function (Router, NavigationView) {
     'use strict';
     var app = {},
-        navbar = new NavigationView();
+        navbar = new NavigationView(),
+        opts = {"pushState": true};
+
+    if (window.rootDir.indexOf('home') > -1) {
+        $.extend(opts, {"root": window.rootDir});
+    }
     app.router = new Router();
     Backbone.history.start({"pushState": true, "root": window.rootDir});
     $(document).on('click', 'a:not([data-bypass])', function (evt) {
