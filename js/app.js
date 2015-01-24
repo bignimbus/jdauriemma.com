@@ -7,7 +7,7 @@ function (Router, NavigationView) {
     var app = {},
         navbar = new NavigationView();
     app.router = new Router();
-    Backbone.history.start({"pushState": true});
+    Backbone.history.start({"pushState": true, "root": window.rootDir});
     $(document).on('click', 'a:not([data-bypass])', function (evt) {
         var href = $(this).attr('href'),
             protocol = this.protocol + '//';

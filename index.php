@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" type="text/css" href="styles/style.css" />
+	<?php
+		echo '<script>window.rootDir = "'.__DIR__.'";</script>';
+	?>
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/underscore/underscore-min.js"></script>
 	<script src="bower_components/backbone/backbone.js"></script>
@@ -55,18 +58,6 @@
 		</footer>
 	</div>
 </div>
-<!-- <script>
-	$(document).delegate("a", "click", function(evt) {
-	    var href = $(this).attr("href");
-	    var protocol = this.protocol + "//";
-
-	    if (href.slice(protocol.length) !== protocol && protocol !== 'javascript://' &&      href.substring(0, 1) !== '#') {
-	        evt.preventDefault();
-
-	        Backbone.history.navigate(href, true);
-	    }
-	});
-</script> -->
 <script data-main="js/app" src="bower_components/requirejs/require.js"></script>
 </body>
 </html>
