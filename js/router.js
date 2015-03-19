@@ -15,7 +15,7 @@ function (
     return Backbone.Router.extend({
         "routes": {
             '': 'defaultRoute',
-            'blog': 'blogPost',
+            'latest': 'blogPost',
             'blog_:slug': 'blogPost',
             'archive_:tag': 'archive',
             'archive': 'archive',

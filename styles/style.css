@@ -4,7 +4,7 @@
 }
 .colorize:active,
 .colorize:hover {
-  background: #ffa500;
+  background: #008000;
 }
 #music li,
 #social li,
@@ -202,6 +202,7 @@ header div.center {
   float: left;
   left: 0;
   margin: 0 auto;
+  padding-right: 0.3em;
   position: absolute;
   right: 0;
 }

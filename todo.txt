@@ -1,5 +1,8 @@
 to do
 
-catch typos and formatting bugs in tumblr posts
+add bottom call-to-action drawer (w/ animation?)
+convert certain ui elements from text to icons
+larger borders on smartphone media query
+center page titles
 add icons for stars, forks, watch on github
 add icons for fav, retweet on twitter

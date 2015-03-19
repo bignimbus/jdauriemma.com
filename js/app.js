@@ -15,9 +15,8 @@ function (Router, NavigationView) {
     app.router = new Router();
     Backbone.history.start(opts);
     $(document).on('click', 'a:not([data-bypass])', function (evt) {
-        var href = $(this).attr('href'),
-            protocol = this.protocol + '//';
-        if (href.slice(protocol.length) !== protocol) {
+        var href = $(this).attr('href');
+        if (!/http/i.test(href)) {
             evt.preventDefault();
             app.router.navigate(href, true);
         }
