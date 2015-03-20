@@ -12,7 +12,9 @@ return Handlebars.template({"1":function(depth0,helpers,partials,data) {
     + escapeExpression(((helper = (helper = helpers.prev || (depth0 != null ? depth0.prev : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"prev","hash":{},"data":data}) : helper)))
     + "\" class=\"prev\">prev</a></div>\n    <div><a href=\"/archive\">archive</a></div>\n    <div><a href=\""
     + escapeExpression(((helper = (helper = helpers.next || (depth0 != null ? depth0.next : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"next","hash":{},"data":data}) : helper)))
-    + "\" class=\"next\">next</a></div>\n</nav>\n<div id=\"entries\">\n    <h2><a href=\"#\">"
+    + "\" class=\"next\">next</a></div>\n</nav>\n<div id=\"entries\">\n    <h2><a href=\"blog_"
+    + escapeExpression(((helper = (helper = helpers.slug || (depth0 != null ? depth0.slug : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"slug","hash":{},"data":data}) : helper)))
+    + "\">"
     + escapeExpression(((helper = (helper = helpers['regular-title'] || (depth0 != null ? depth0['regular-title'] : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"regular-title","hash":{},"data":data}) : helper)))
     + "</a></h2>\n    <h4>published "
     + escapeExpression(((helpers.format_date || (depth0 && depth0.format_date) || helperMissing).call(depth0, (depth0 != null ? depth0['unix-timestamp'] : depth0), "X", {"name":"format_date","hash":{},"data":data})))
