@@ -13,7 +13,7 @@ define([], function () {
         },
         "setTextSnippet": function () {
             var post = this.get('regular-body'),
-                text = /<p>(.*?)<\/p>/g.exec(post);
+                text = /<p>((?:.|[\r\n])*?)<\/p>/g.exec(post);
             text = text[1] && text[1].replace(/<(?:.|\n)*?>/gm, '');
             text = text.slice(0, 100) + '...';
             this.set('snippet', text);
