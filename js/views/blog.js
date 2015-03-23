@@ -58,7 +58,7 @@ function (AppView, singlePostTemplate, blogListTemplate) {
                 scrollTop = $('body').scrollTop();
             if (scrollTop > this.previousScrollTop && !isVisible) {
                 $shareBar.addClass('show');
-            } else if (isVisible) {
+            } else if (scrollTop < this.previousScrollTop && isVisible) {
                 $shareBar.removeClass('show');
             }
             this.previousScrollTop = scrollTop;
