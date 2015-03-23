@@ -38,14 +38,15 @@ function (
             this.loadBlog(_.bind(function () {
                 if (!slug) {
                     this.navigate('blog_' + this.blogCollection.at(0).get('slug'), {"trigger": false});
+                    $('#blog').attr('href', 'blog_' + this.blogCollection.at(0).get('slug'));
                 }
-                this.view.render(slug);
+                this.blogView.render(slug);
             }, this));
         },
 
         "archive": function (tag) {
             this.loadBlog(_.bind(function () {
-                this.view.renderArchive(tag);
+                this.blogView.renderArchive(tag);
             }, this));
         },
 
@@ -53,15 +54,13 @@ function (
             if (!this.blogCollection) {
                 this.blogCollection = new BlogCollection();
             }
-            if (this.view) {
-                $(document).off();
-            }
-            this.view = new BlogView({
+            this.blogView = this.blogView || new BlogView({
                 "collection": this.blogCollection,
-                "id": "blog",
                 "router": this
             });
-            this.view.loading();
+            $('article').removeClass('show');
+            this.blogView.$el.addClass('show');
+            this.blogView.loading();
             this.blogCollection.fetch({
                 "success": success
             });
@@ -97,18 +96,22 @@ function (
         "loadPage": function (opts) {
             opts = opts || {};
             var success,
-                data = opts.model || opts.collection || null;
+                viewName = opts.id + 'View';
 
-            if (this.view) {
-                $(document).off();
+            if (this.blogView) {
+                $(document).off('scroll');
             }
-            this.view = new AppView(opts);
-            this.view.loading();
+            this[viewName] = this[viewName] || new AppView({
+                "el": "article." + opts.id
+            });
+            $('article').removeClass('show');
+            this[viewName].$el.addClass('show');
+            this[viewName].loading();
 
             success = _.bind(function () {
-                this.view.render();
+                this[viewName].render(opts);
             }, this);
-            data.fetch({
+            opts.model.fetch({
                 "success": success
             });
         }

@@ -3,7 +3,7 @@ function (AppView, singlePostTemplate, blogListTemplate) {
     'use strict';
     return AppView.extend({
         "currentPost": null,
-        "el": "article",
+        "el": "article.blog",
         "previousScrollTop": 0,
         "events": {
             "scrolled": "showSocial",
@@ -17,14 +17,12 @@ function (AppView, singlePostTemplate, blogListTemplate) {
                 "prev": prev,
                 "next": next
             })));
-            this.$el.prop('id', this.id);
         },
         "renderArchive": function (tag) {
             var posts = tag ? this.getPostsWith(tag) : this.collection;
             this.$el.html(blogListTemplate($.extend({}, {
                 "title": tag ? "Posts with #" + tag : "Archive"
             }, posts.toJSON())));
-            this.$el.prop('id', this.id);
         },
         "getPost": function (slug) {
             var post = this.collection.findWhere({
