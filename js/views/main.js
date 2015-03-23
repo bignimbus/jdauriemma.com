@@ -9,6 +9,7 @@ function (loadingTemplate, router) {
             this.router = router;
             this.template = options && options.template;
             this.setBackground();
+            this.startScrollListener();
         },
         "render": function (collection) {
             this.$el.html(this.template(this.model.toJSON()));
@@ -36,6 +37,17 @@ function (loadingTemplate, router) {
             ],
             random = Math.floor(Math.random() * images.length);
             return 'url("images/' + images[random] + '")';
+        },
+        "startScrollListener": function () {
+            var triggerScroll = function () {
+                this.triggerScrollEvent();
+            }.bind(this);
+            if (this.previousScrollTop !== void 0) {
+                $(document).on('scroll', _.debounce(triggerScroll, 200));
+            }
+        },
+        "triggerScrollEvent": function () {
+            this.$el.trigger("scrolled");
         }
     });
 });
