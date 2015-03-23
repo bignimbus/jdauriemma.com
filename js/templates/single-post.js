@@ -28,7 +28,7 @@ return Handlebars.template({"1":function(depth0,helpers,partials,data) {
     + escapeExpression(((helper = (helper = helpers.prev || (depth0 != null ? depth0.prev : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"prev","hash":{},"data":data}) : helper)))
     + "\" class=\"prev\">prev</a></div>\n    <div><a href=\"/archive\">archive</a></div>\n    <div><a href=\""
     + escapeExpression(((helper = (helper = helpers.next || (depth0 != null ? depth0.next : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"next","hash":{},"data":data}) : helper)))
-    + "\" class=\"next\">next</a></div>\n</nav>";
+    + "\" class=\"next\">next</a></div>\n</nav>\n<section class=\"social-buttons\">\n    <div class=\"subscribe\"><span class=\"fa fa-rss fa-lg\"></span></div>\n    <div class=\"facebook\"><span class=\"fa fa-facebook fa-lg\"></span></div>\n    <div class=\"twitter\"><span class=\"fa fa-twitter fa-lg\"></span></div>\n    <div class=\"tumblr\"><span class=\"fa fa-tumblr fa-lg\"></span></div>\n    <div class=\"reddit\"><span class=\"fa fa-reddit fa-lg\"></span></div>\n</section>";
 },"useData":true})
 
 });
