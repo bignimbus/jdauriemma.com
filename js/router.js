@@ -35,35 +35,33 @@ function (
         },
 
         "blogPost": function (slug) {
-            if (!this.blogCollection || !this.blogView) {
-                this.loadBlog(_.bind(function () {
-                    this.blogView.render(slug);
-                }, this));
-            } else {
-                this.blogView.loading();
-                this.blogView.render(slug);
-            }
+            this.loadBlog(_.bind(function () {
+                if (!slug) {
+                    this.navigate('blog_' + this.blogCollection.at(0).get('slug'), {"trigger": false});
+                }
+                this.view.render(slug);
+            }, this));
         },
 
         "archive": function (tag) {
-            if (!this.blogCollection || !this.blogView) {
-                this.loadBlog(_.bind(function () {
-                    this.blogView.renderArchive(tag);
-                }, this));
-            } else {
-                this.blogView.loading();
-                this.blogView.renderArchive(tag);
-            }
+            this.loadBlog(_.bind(function () {
+                this.view.renderArchive(tag);
+            }, this));
         },
 
         "loadBlog": function (success) {
-            this.blogCollection = new BlogCollection();
-            this.blogView = new BlogView({
+            if (!this.blogCollection) {
+                this.blogCollection = new BlogCollection();
+            }
+            if (this.view) {
+                $(document).off();
+            }
+            this.view = new BlogView({
                 "collection": this.blogCollection,
                 "id": "blog",
                 "router": this
             });
-            this.blogView.loading();
+            this.view.loading();
             this.blogCollection.fetch({
                 "success": success
             });
@@ -101,6 +99,9 @@ function (
             var success,
                 data = opts.model || opts.collection || null;
 
+            if (this.view) {
+                $(document).off();
+            }
             this.view = new AppView(opts);
             this.view.loading();
 
