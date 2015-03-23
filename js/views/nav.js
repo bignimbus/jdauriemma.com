@@ -14,7 +14,7 @@ function (navTemplate) {
         },
         "toggleActive": function (e) {
             this.$('.menuitem').removeClass('active');
-            this.$(e.currentTarget.hash).addClass('active');
+            this.$(e.currentTarget).addClass('active');
         }
     });
 });
