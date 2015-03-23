@@ -38,7 +38,7 @@
     <meta property="og:title" content="Jeffrey Auriemma">
     <meta property="og:type" content="blog">
     <meta property="og:url" content="http://jdauriemma.com">
-    <meta property="og:image" content="http://www.gravatar.com/avatar/b468e15f13a4f3cb7fc51693e17c2466.png">
+    <meta property="og:image" content="http://s.gravatar.com/avatar/b468e15f13a4f3cb7fc51693e17c2466?s=400">
     <meta property="og:site_name" content="Jeffrey Auriemma">
     <meta property="og:description" content="JavaScript and Music.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
