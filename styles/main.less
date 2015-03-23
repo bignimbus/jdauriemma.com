@@ -1,0 +1,296 @@
+@import 'variables';
+@import 'views';
+
+html {
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #555;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+#container {
+    background: white;
+    border: 0.125em solid #000;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 2em;
+    max-width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    text-align: left;
+    width: 50rem;
+}
+
+header {
+    clear: both;
+    margin: 0 auto;
+    height: 6.25em;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 100%;
+    div {
+        height: 5em;
+        overflow: hidden;
+        width: 16em;
+        img{
+            height: 5em;
+            width: 16em;
+        }
+        &.center {
+            background: #fff;
+            float: left;
+            left: 0;
+            margin: 0 auto;
+            padding-right: 0.3em;
+            position: absolute;
+            right: 0;
+        }
+        &.left {
+            float: left;
+            width: 33.3%;
+        }
+        &.right {
+            float: right;
+            width: 33.3%;
+        }
+    }
+}
+
+article {
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    li {
+        font-family: Monaco, Consolas, "Lucida Console", monospace;
+    }
+    height: auto;
+    padding-left:5em;
+    padding-right:5em;
+}
+
+div {
+    margin: 0 auto;
+    &.bottom {
+        clear: both;
+        height: 2.5em;
+        padding-top: 2em;
+        text-align: center;
+        width: 100%;
+    }
+    &.viewerwrapper {
+        min-height: 91%;
+        position: inherit;
+        width: 40em;
+    }
+
+    &.vignette {
+        margin: 0 auto; 
+        text-align: center;
+    }
+
+    &.code {
+        margin: 0 0 3em 0;
+    }
+}
+
+#leftnav {
+    display: inline;
+    float: left;
+    height: 5em;
+    margin-top: 10em;
+    vertical-align: middle;
+    width: 1em;
+}
+
+#rightnav {
+    display: inline;
+    float: left;
+    height: 5em;
+    margin-top: 10em;
+    vertical-align: middle;
+    width: 1em;
+}
+
+#viewer {
+    display: inline;
+    float: left;
+    min-height: 30em;
+    width: 38em;
+}
+
+#navbar {
+    float: left;
+    font-size: 1.5rem;
+    font-family: mario3;
+    margin: 0 auto;
+    min-height: 2.5em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    text-align: center;
+    width: 100%;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        .select {
+            color: #000;
+            display: inline;
+            padding: 0.25em;
+            text-decoration: none;
+            vertical-align: middle;
+            width: 0.8em;
+        }
+    }
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+    &.menuitem {
+        color: #000;
+        text-decoration: none;
+        &:before {
+            border-right: 0;
+            border-top: 13px solid transparent;
+            border-bottom: 13px solid transparent;
+            border-left: 20px solid #000;
+            content: '';
+            display: inline-block;
+            height: 0;
+            visibility: hidden;
+            width: 0;
+        }
+        &.active:before,
+        &:active:before,
+        &:hover:before,
+        &:focus:before {
+            border-right: 0;
+            border-top: 13px solid transparent;
+            border-bottom: 13px solid transparent;
+            border-left: 20px solid #000;
+            content: '';
+            display: inline-block;
+            height: 0;
+            visibility: visible;
+            width: 0;
+        }
+        &#blog {
+            &.active:before,
+            &:active:before,
+            &:hover:before,
+            &:focus:before {
+                border-left: 20px solid red;
+            }
+        }
+        &#code {
+            &.active:before,
+            &:active:before,
+            &:hover:before,
+            &:focus:before {
+                border-left: 20px solid blue;
+            }
+        }
+        &#music {
+            &.active:before,
+            &:active:before,
+            &:hover:before,
+            &:focus:before {
+                border-left: 20px solid green;
+            }
+        }
+        &#social {
+            &.active:before,
+            &:active:before,
+            &:hover:before,
+            &:focus:before {
+                border-left: 20px solid orange;
+            }
+        }
+    }
+}
+
+h1 {
+    font-family: mario3;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: mario3;
+    font-size: 1.3rem;
+}
+
+h3 {
+    color: gray;
+    font-family: mario3;
+    font-size: 1.2rem;
+}
+
+p {
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    vertical-align:middle;
+    &.foot {
+        color: gray;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+audio {
+    width:100%;
+}
+
+pre {
+    border-left: 0.1em solid #555;
+    font-size: 1rem;
+    overflow-x: auto;
+    padding-left: 0.5em;
+}
+
+@media screen
+and (max-width: 750px) {
+    nav {
+        .select:nth-child(2):after {
+            content: '';
+            display: block;
+        }
+    }
+}
+
+/* =Smartphones (portrait)*/
+@media screen
+and (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+    #container {
+        padding: 0;
+    }
+    article {
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+    }
+    nav {
+        .select:nth-child(2):after {
+            content: '';
+            display: block;
+        }
+    }
+    nav.blog {
+        padding-bottom: 1em;
+        padding-top: 1em;
+    }
+}

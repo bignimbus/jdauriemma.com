@@ -1,3 +1,5 @@
+@import '../bower_components/font-awesome/less/font-awesome.less';
+
 #music, #social, #code {
     li {
         font-family: Monaco, Consolas, "Lucida Console", monospace;
@@ -75,6 +77,41 @@
 #blog {
     h4, h5, h6, {
         font-family: mario3;
+    }
+    .social-buttons {
+        bottom: -2rem;
+        display: table;
+        height: 2rem;
+        position: fixed;
+        transition: bottom 1s;
+        width: 36rem;
+        @media screen
+            and (max-width : 600px) {
+            width: 100%;
+        }
+        &.show {
+            bottom: 0;
+        }
+        div {
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px 1px 0 0 solid #000;
+            box-sizing: border-box;
+            display: table-cell;
+            height: 100%;
+            position: relative;
+            transition: background-color 300ms, color 300ms;
+            width: 20%;
+            &:hover,
+            &:active {
+                background-color: rgba(0, 0, 0, 1);
+                color: #fff;
+            }
+            span {
+                display: block;
+                padding-top: 0.5rem;
+                text-align: center;
+            }
+        }
     }
     nav {
         clear: both;
