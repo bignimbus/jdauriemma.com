@@ -17,6 +17,7 @@ function (AppView, singlePostTemplate, blogListTemplate) {
                 "prev": prev,
                 "next": next
             })));
+            this.startScrollListener();
         },
         "renderArchive": function (tag) {
             var posts = tag ? this.getPostsWith(tag) : this.collection;
