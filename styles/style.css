@@ -4,7 +4,7 @@
 }
 .colorize:active,
 .colorize:hover {
-  background: #ff0000;
+  background: #008000;
 }
 /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -1756,15 +1756,16 @@
   font-family: mario3;
 }
 #blog .social-buttons {
-  bottom: -2rem;
+  bottom: -32px;
   display: table;
-  height: 2rem;
+  height: 32px;
   position: fixed;
   transition: bottom 1s;
   width: 36rem;
 }
 @media screen and (max-width: 600px) {
   #blog .social-buttons {
+    left: -1px;
     width: 100%;
   }
 }
@@ -1788,7 +1789,7 @@
 }
 #blog .social-buttons div span {
   display: block;
-  padding-top: 0.5rem;
+  padding-top: 11px;
   text-align: center;
 }
 #blog nav {
