@@ -1,20 +1,24 @@
 @import '../bower_components/font-awesome/less/font-awesome.less';
 
-#music, #social, #code {
-    li {
-        font-family: Monaco, Consolas, "Lucida Console", monospace;
-        word-wrap: break-word;
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-        &:hover {
-            background: #ddd;
+article {
+    &.music,
+    &.social,
+    &.code {
+        li {
+            font-family: Monaco, Consolas, "Lucida Console", monospace;
+            word-wrap: break-word;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            &:hover {
+                background: #ddd;
+            }
         }
     }
 }
 
-#code {
+article.code {
     h2 {
         margin: 0 auto;
         padding-bottom: 1em;
@@ -49,7 +53,7 @@
     }
 }
 
-#social {
+article.social {
     ul {
         border-left: 1px solid #555;
         margin-bottom: 2em;
@@ -74,7 +78,7 @@
     }
 }
 
-#blog {
+article.blog {
     h4, h5, h6, {
         font-family: mario3;
     }

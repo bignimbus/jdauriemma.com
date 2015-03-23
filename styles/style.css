@@ -1678,62 +1678,62 @@
 .fa-meanpath:before {
   content: "\f20c";
 }
-#music li,
-#social li,
-#code li {
+article.music li,
+article.social li,
+article.code li {
   font-family: Monaco, Consolas, "Lucida Console", monospace;
   word-wrap: break-word;
 }
-#music ul,
-#social ul,
-#code ul {
+article.music ul,
+article.social ul,
+article.code ul {
   list-style: none;
   padding: 0;
 }
-#music ul:hover,
-#social ul:hover,
-#code ul:hover {
+article.music ul:hover,
+article.social ul:hover,
+article.code ul:hover {
   background: #ddd;
 }
-#code h2 {
+article.code h2 {
   margin: 0 auto;
   padding-bottom: 1em;
   text-align: center;
 }
-#code .owner-info {
+article.code .owner-info {
   font-family: mario3;
 }
-#code .updated {
+article.code .updated {
   font-style: italic;
 }
-#code ul,
-#code li {
+article.code ul,
+article.code li {
   margin: 0 auto;
   text-align: center;
 }
-#code ul {
+article.code ul {
   border: 0.1em solid #888;
   padding: 0.2em;
 }
-#code li {
+article.code li {
   padding: 0.25em 0;
 }
-#code #repos {
+article.code #repos {
   float: left;
   margin-right: 0.5em;
   width: 48%;
 }
-#code #gists {
+article.code #gists {
   float: left;
   margin-left: 0.5em;
   width: 48%;
 }
-#social ul {
+article.social ul {
   border-left: 1px solid #555;
   margin-bottom: 2em;
   padding-left: 1em;
 }
-#social .handle {
+article.social .handle {
   clear: none;
   display: inline-block;
   font-family: mario3;
@@ -1741,21 +1741,21 @@
   margin-right: 0.5em;
   vertical-align: baseline;
 }
-#social .network-icons {
+article.social .network-icons {
   margin: 0 auto;
   padding-top: 1em;
   text-align: center;
 }
-#social .network-icon {
+article.social .network-icon {
   display: inline-block;
   margin: 0 1em 1em 1em;
 }
-#blog h4,
-#blog h5,
-#blog h6 {
+article.blog h4,
+article.blog h5,
+article.blog h6 {
   font-family: mario3;
 }
-#blog .social-buttons {
+article.blog .social-buttons {
   bottom: -32px;
   display: table;
   height: 32px;
@@ -1764,15 +1764,15 @@
   width: 36rem;
 }
 @media screen and (max-width: 600px) {
-  #blog .social-buttons {
+  article.blog .social-buttons {
     left: -1px;
     width: 100%;
   }
 }
-#blog .social-buttons.show {
+article.blog .social-buttons.show {
   bottom: 0;
 }
-#blog .social-buttons div {
+article.blog .social-buttons div {
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px 1px 0 0 solid #000;
   box-sizing: border-box;
@@ -1782,38 +1782,38 @@
   transition: background-color 300ms, color 300ms;
   width: 20%;
 }
-#blog .social-buttons div:hover,
-#blog .social-buttons div:active {
+article.blog .social-buttons div:hover,
+article.blog .social-buttons div:active {
   background-color: #000000;
   color: #fff;
 }
-#blog .social-buttons div span {
+article.blog .social-buttons div span {
   display: block;
   padding-top: 11px;
   text-align: center;
 }
-#blog nav {
+article.blog nav {
   clear: both;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-#blog nav.blog div a {
+article.blog nav.blog div a {
   color: #000;
   font-family: mario3;
 }
-#blog nav ul {
+article.blog nav ul {
   list-style: none;
 }
-#blog #entries img {
+article.blog #entries img {
   height: auto;
   max-height: 100%;
   max-width: 100%;
 }
-#blog .tags {
+article.blog .tags {
   margin-bottom: 1em;
 }
-#blog .tags .tag {
+article.blog .tags .tag {
   background: #ddd;
   color: #000;
   font-family: mario3;
@@ -1822,7 +1822,7 @@
   letter-spacing: -0.1em;
   white-space: nowrap;
 }
-#blog .post-list ul {
+article.blog .post-list ul {
   border-left: 0.1em solid #555;
   clear: both;
   display: table;
@@ -1830,31 +1830,31 @@
   margin-left: 0;
   padding-left: 0.2em;
 }
-#blog .post-list ul:hover {
+article.blog .post-list ul:hover {
   background: #ddd;
 }
-#blog .post-list ul li {
+article.blog .post-list ul li {
   clear: none;
   display: table-cell;
   margin-top: 0.5em;
 }
-#blog .post-list ul .hero {
+article.blog .post-list ul .hero {
   max-height: 10em;
   width: 25%;
 }
-#blog .post-list ul .hero img {
+article.blog .post-list ul .hero img {
   height: auto;
   max-height: 100%;
   max-width: 100%;
   width: auto;
 }
-#blog .post-list ul .text {
+article.blog .post-list ul .text {
   padding-left: 1em;
   vertical-align: top;
   width: 75%;
 }
-#blog .post-list ul .text p,
-#blog .post-list ul .text h4 {
+article.blog .post-list ul .text p,
+article.blog .post-list ul .text h4 {
   margin: 0.2em 0 0 0;
   padding: 0;
 }
@@ -1924,9 +1924,13 @@ header div.right {
   width: 33.3%;
 }
 article {
+  display: none;
   height: auto;
   padding-left: 5em;
   padding-right: 5em;
+}
+article.show {
+  display: block;
 }
 article a:hover {
   text-decoration: underline;
