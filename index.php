@@ -38,7 +38,7 @@
     <meta property="og:title" content="Jeffrey Auriemma">
     <meta property="og:type" content="blog">
     <meta property="og:url" content="http://jdauriemma.com">
-    <meta property="og:image" content="http://jdauriemma.com/images/banner.jpgg">
+    <meta property="og:image" content="http://jdauriemma.com/images/banner.jpg">
     <meta property="og:site_name" content="Jeffrey Auriemma">
     <meta property="og:description" content="JavaScript and Music.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
