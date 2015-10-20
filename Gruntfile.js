@@ -1,12 +1,22 @@
 var pushState = require('grunt-connect-pushstate/lib/utils').pushState,
     rewrite = require('connect-modrewrite'),
     rewriteRulesSnippet = require('grunt-connect-rewrite/lib/utils').rewriteRequest;
+grunt.loadNpmTasks('grunt-webpack');
 module.exports = function (grunt) {
     grunt.initConfig({
         "less": {
             "development": {
                 "files": {
                     "styles/style.css": "styles/main.less"
+                }
+            }
+        },
+        "webpack": {
+           "default": {
+                "entry": "js/app.js",
+                "output": {
+                    "path": "dist/",
+                    "filename": "main.js"
                 }
             }
         },
