@@ -1,7 +1,6 @@
-var pushState = require('grunt-connect-pushstate/lib/utils').pushState,
+var pushState = require('connect-pushstate'),
     rewrite = require('connect-modrewrite'),
     rewriteRulesSnippet = require('grunt-connect-rewrite/lib/utils').rewriteRequest;
-grunt.loadNpmTasks('grunt-webpack');
 module.exports = function (grunt) {
     grunt.initConfig({
         "less": {
@@ -12,11 +11,14 @@ module.exports = function (grunt) {
             }
         },
         "webpack": {
-           "default": {
-                "entry": "js/app.js",
+            "default": {
+                //"context": __dirname + "/js",
+                "inline": true,
+                "entry": "./js/app.js",
                 "output": {
-                    "path": "dist/",
-                    "filename": "main.js"
+                    "path": "./dist",
+                    "filename": "app.js",
+                    "library": "app"
                 }
             }
         },
@@ -24,7 +26,7 @@ module.exports = function (grunt) {
             "options": {
                 "namespace": false,
                 "amd": [
-                    "helper"
+                    "../helper"
                 ],
                 "partialRegex": /.*/,
                 "partialsPathRegex": /js\/partials\//
@@ -91,13 +93,14 @@ module.exports = function (grunt) {
         "php": {
             "dist": {
                 "options": {
-                    "port": 5000,
+                    "port": 5001,
                     "keepalive": true,
                     "base": "./"
                 }
             }
         }
     });
+    grunt.loadNpmTasks('grunt-webpack');
     grunt.loadNpmTasks('grunt-contrib-handlebars');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-connect');
