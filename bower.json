@@ -14,10 +14,11 @@
   ],
   "devDependencies": {},
   "dependencies": {
-    "handlebars": "~4.0.3",
+    "handlebars": "2.0.0",
     "moment": "~2.10.6",
     "jquery": "~2.1.4",
     "underscore": "~1.8.3",
-    "backbone": "~1.2.3"
+    "backbone": "~1.2.3",
+    "font-awesome": "~4.5.0"
   }
 }
