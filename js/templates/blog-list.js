@@ -1,4 +1,4 @@
-define(['helper'], function(Handlebars) {
+define(['../helper'], function(Handlebars) {
 
 return Handlebars.template({"1":function(depth0,helpers,partials,data) {
   var stack1;

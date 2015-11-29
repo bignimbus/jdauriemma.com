@@ -1,4 +1,4 @@
-define(['helper'], function(Handlebars) {
+define(['../helper'], function(Handlebars) {
 
 return Handlebars.template({"1":function(depth0,helpers,partials,data) {
   var stack1, helper, lambda=this.lambda, escapeExpression=this.escapeExpression, functionType="function", helperMissing=helpers.helperMissing, buffer = "<ul>\n    <li><img class=\"avatar\" src=\""

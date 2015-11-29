@@ -1,5 +1,5 @@
-define(['../bower_components/moment/min/moment.min.js'],
-function (moment) {
+define([],
+function () {
     'use strict';
     return Backbone.Model.extend({
         "parse": function (response) {

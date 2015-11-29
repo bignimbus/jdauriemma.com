@@ -10,9 +10,10 @@
             window.rootDir = window.rootDir.slice(window.rootDir.indexOf('_html') + 6);
         }
     </script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/underscore/underscore-min.js"></script>
-    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <meta charset="utf-8" />
     <title>Jeffrey Auriemma</title>
     <link rel="shortcut icon" href="favicon/favicon.ico">
@@ -73,6 +74,6 @@
         </footer>
     </div>
 </div>
-<script data-main="js/app" src="bower_components/requirejs/require.js"></script>
+<script src="dist/app.min.js"></script>
 </body>
 </html>

@@ -1,6 +1,3 @@
-require.config({
-    "baseUrl": "./js/"
-});
 require(['router', 'views/nav'],
 function (Router, NavigationView) {
     'use strict';
