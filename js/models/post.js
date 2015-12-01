@@ -13,9 +13,8 @@ define([], function () {
         },
         "setTextSnippet": function () {
             var post = this.get('regular-body'),
-                text = /<p>((?:.|[\r\n])*?)<\/p>/g.exec(post);
-            text = text[1] && text[1].replace(/<(?:.|\n)*?>/gm, '');
-            text = text.slice(0, 100) + '...';
+              text = $('<div>' + post + '</div>').children('p').text();
+            text = text.replace(/[\r\n]/g, ' ').slice(0, 100) + '...';
             this.set('snippet', text);
         }
     });
