@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/vs.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/idea.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <?php
         echo "<script>window.rootDir = \"".dirname(__FILE__)."\";</script>";
