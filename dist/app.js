@@ -5687,6 +5687,7 @@ views_blog = function (AppView, singlePostTemplate, blogListTemplate) {
         'next': next
       })));
       this.startScrollListener();
+      this.$('pre').each(this.highlightSyntax);
     },
     'renderArchive': function (tag) {
       var posts = tag ? this.getPostsWith(tag) : this.collection;
@@ -5728,6 +5729,9 @@ views_blog = function (AppView, singlePostTemplate, blogListTemplate) {
         'reddit': 'http://reddit.com/submit?url=' + current,
         'twitter': 'http://twitter.com/share?url=' + current
       }[network];
+    },
+    'highlightSyntax': function () {
+      hljs.highlightBlock(this);
     }
   });
 }(views_main, templates_single_post, templates_blog_list);

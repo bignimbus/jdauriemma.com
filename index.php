@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/vs.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <?php
         echo "<script>window.rootDir = \"".dirname(__FILE__)."\";</script>";
@@ -10,10 +11,6 @@
             window.rootDir = window.rootDir.slice(window.rootDir.indexOf('_html') + 6);
         }
     </script>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <meta charset="utf-8" />
     <title>Jeffrey Auriemma</title>
     <link rel="shortcut icon" href="favicon/favicon.ico">
@@ -74,6 +71,12 @@
         </footer>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <script src="dist/app.min.js"></script>
 </body>
 </html>
