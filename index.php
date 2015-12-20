@@ -30,15 +30,15 @@
     <meta name="msapplication-square150x150logo" content="favicon/mstile-150x150.png">
     <meta name="msapplication-square310x310logo" content="favicon/mstile-310x310.png">
     <meta name="msapplication-wide310x150logo" content="favicon/mstile-310x150.png">
-    <meta name="description" content="Likes JavaScript and Music">
-    <meta name="keywords" content="music, teaching, teacher, chicago, new jersey, programmer, javascript, html">
+    <meta name="description" content="Code and Music">
+    <meta name="keywords" content="code, ruby, web, music, chicago, javascript, html">
     <meta name="author" content="Jeffrey Auriemma">
     <meta property="og:title" content="Jeffrey Auriemma">
     <meta property="og:type" content="blog">
     <meta property="og:url" content="http://jdauriemma.com">
     <meta property="og:image" content="http://jdauriemma.com/images/banner.jpg">
     <meta property="og:site_name" content="Jeffrey Auriemma">
-    <meta property="og:description" content="JavaScript and Music.">
+    <meta property="og:description" content="Code, Music, Education">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
