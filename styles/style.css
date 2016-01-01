@@ -4,7 +4,7 @@
 }
 .colorize:active,
 .colorize:hover {
-  background: #ff0000;
+  background: #008000;
 }
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2518,7 +2518,7 @@ pre {
 /* =Smartphones (portrait)*/
 @media screen and (max-width: 600px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
   #container {
     padding: 0;

@@ -73,13 +73,13 @@ return Handlebars.template({"1":function(depth0,helpers,partials,data) {
   return escapeExpression(((helper = (helper = helpers.filename || (depth0 != null ? depth0.filename : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"filename","hash":{},"data":data}) : helper)))
     + " ";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-  var stack1, buffer = "<p>\nI enjoy working with: JavaScript, jQuery, underscore, Backbone, handlebars, jasmine, node/npm, grunt, git, html5, less, and css.  See below for my code and my contributions to others' projects.\n</p>\n<div id=\"repos\">\n<h2>Repos</h2>\n";
+  var stack1, buffer = "<p>\nI enjoy working with JavaScript, Angular, Backbone, Node, CSS preprocessors and Ruby on Rails.  See below for my code and my contributions to others' projects.\n</p>\n<div id=\"repos\">\n<h2>Repos</h2>\n";
   stack1 = helpers.each.call(depth0, (depth0 != null ? depth0.repos : depth0), {"name":"each","hash":{},"fn":this.program(1, data),"inverse":this.noop,"data":data});
   if (stack1 != null) { buffer += stack1; }
   buffer += "</div>\n<div id=\"gists\">\n<h2>Gists</h2>\n";
   stack1 = helpers.each.call(depth0, (depth0 != null ? depth0.gists : depth0), {"name":"each","hash":{},"fn":this.program(7, data),"inverse":this.noop,"data":data});
   if (stack1 != null) { buffer += stack1; }
-  return buffer + "</div>";
+  return buffer + "</div>\n";
 },"useData":true})
 
 });

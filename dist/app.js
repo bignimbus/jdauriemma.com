@@ -5688,10 +5688,12 @@ views_blog = function (AppView, singlePostTemplate, blogListTemplate) {
       })));
       this.startScrollListener();
       this.$('pre').each(this.highlightSyntax);
+      this.initLazyLoad();
     },
     'renderArchive': function (tag) {
       var posts = tag ? this.getPostsWith(tag) : this.collection;
       this.$el.html(blogListTemplate($.extend({}, { 'title': tag ? 'Posts with #' + tag : 'Archive' }, posts.toJSON())));
+      this.initLazyLoad();
     },
     'getPost': function (slug) {
       var post = this.collection.findWhere({ 'slug': slug }) || this.collection.at(0);
@@ -5732,6 +5734,9 @@ views_blog = function (AppView, singlePostTemplate, blogListTemplate) {
     },
     'highlightSyntax': function () {
       hljs.highlightBlock(this);
+    },
+    'initLazyLoad': function () {
+      this.$('img').lazyload({ 'skip_invisible': true });
     }
   });
 }(views_main, templates_single_post, templates_blog_list);
@@ -5766,8 +5771,13 @@ collections_tweets = function (TweetModel) {
 }(models_tweet);
 models_post = Backbone.Model.extend({
   'initialize': function () {
+    this.initLazyLoad();
     this.setHeroImage();
     this.setTextSnippet();
+  },
+  'initLazyLoad': function () {
+    var post = this.get('regular-body'), lazyImgs = post.replace(/\<img(.*)src\s?=\s?"(.*)"(.*)\>/gi, '<img$1data-original="$2"$3>');
+    this.set('regular-body', lazyImgs);
   },
   'setHeroImage': function () {
     var post = this.get('regular-body'), img = post.slice(post.indexOf('<img '));
@@ -6023,7 +6033,7 @@ templates_code = function (Handlebars) {
       '>= 2.0.0-beta.1'
     ],
     'main': function (depth0, helpers, partials, data) {
-      var stack1, buffer = '<p>\nI enjoy working with: JavaScript, jQuery, underscore, Backbone, handlebars, jasmine, node/npm, grunt, git, html5, less, and css.  See below for my code and my contributions to others\' projects.\n</p>\n<div id="repos">\n<h2>Repos</h2>\n';
+      var stack1, buffer = '<p>\nI enjoy working with JavaScript, Angular, Backbone, Node, CSS preprocessors and Ruby on Rails.  See below for my code and my contributions to others\' projects.\n</p>\n<div id="repos">\n<h2>Repos</h2>\n';
       stack1 = helpers.each.call(depth0, depth0 != null ? depth0.repos : depth0, {
         'name': 'each',
         'hash': {},
@@ -6045,7 +6055,7 @@ templates_code = function (Handlebars) {
       if (stack1 != null) {
         buffer += stack1;
       }
-      return buffer + '</div>';
+      return buffer + '</div>\n';
     },
     'useData': true
   });

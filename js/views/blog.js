@@ -19,12 +19,14 @@ function (AppView, singlePostTemplate, blogListTemplate) {
             })));
             this.startScrollListener();
             this.$('pre').each(this.highlightSyntax);
+            this.initLazyLoad();
         },
         "renderArchive": function (tag) {
             var posts = tag ? this.getPostsWith(tag) : this.collection;
             this.$el.html(blogListTemplate($.extend({}, {
                 "title": tag ? "Posts with #" + tag : "Archive"
             }, posts.toJSON())));
+            this.initLazyLoad();
         },
         "getPost": function (slug) {
             var post = this.collection.findWhere({
@@ -77,6 +79,9 @@ function (AppView, singlePostTemplate, blogListTemplate) {
         },
         "highlightSyntax": function () {
             hljs.highlightBlock(this);
+        },
+        "initLazyLoad": function () {
+            this.$('img').lazyload({"skip_invisible": true});
         }
     });
 });

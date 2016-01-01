@@ -2,8 +2,14 @@ define([], function () {
     'use strict';
     return Backbone.Model.extend({
         "initialize": function () {
+            this.initLazyLoad();
             this.setHeroImage();
             this.setTextSnippet();
+        },
+        "initLazyLoad": function () {
+            var post = this.get('regular-body'),
+                lazyImgs = post.replace(/\<img(.*)src\s?=\s?"(.*)"(.*)\>/ig, '<img$1data-original="$2"$3>');
+            this.set('regular-body', lazyImgs);
         },
         "setHeroImage": function () {
             var post = this.get('regular-body'),
