@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generated at drububu.com  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="45px" height="60px" viewBox="0 0 45 60">
+<path d="M0 0h15v15h-15z" fill="rgb(255,0,0)"/>
+<path d="M15 0h15v15h-15z" fill="rgb(255,255,0)"/>
+<path d="M30 0h15v15h-15z" fill="rgb(255,165,0)"/>
+<path d="M0 15h15v15h-15z" fill="rgb(0,0,255)"/>
+<path d="M15 15h15v15h-15z" fill="rgb(255,0,0)"/>
+<path d="M30 15h15v15h-15z" fill="rgb(0,128,0)"/>
+<path d="M0 30h15v15h-15z" fill="rgb(0,128,0)"/>
+<path d="M15 30h15v15h-15z" fill="rgb(0,0,255)"/>
+<path d="M30 30h15v15h-15z" fill="rgb(255,255,0)"/>
+<path d="M0 45h15v15h-15z" fill="rgb(255,255,0)"/>
+<path d="M15 45h15v15h-15z" fill="rgb(128,0,128)"/>
+<path d="M30 45h15v15h-15z" fill="rgb(255,0,0)"/>
+</svg>
