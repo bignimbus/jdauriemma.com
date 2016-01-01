@@ -44,20 +44,7 @@
 <body>
 <div id="container">
     <header>
-        <hgroup>
-            <div class = "left">
-                <img src = "images/skylineleft.png">
-            </div>
-            <div class = "center">
-                    <h1>
-                    Jeffrey<br/>
-                    Auriemma
-                    </h1>
-            </div>
-            <div class = "right">
-                <img src = "images/skylineright.png">
-            </div>
-        </hgroup>
+        <h1>Jeffrey<br>Auriemma</h1>
     </header>
     <div id="navbar"></div>
     <article class="blog"></article>

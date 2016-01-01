@@ -4,7 +4,7 @@
 }
 .colorize:active,
 .colorize:hover {
-  background: #008000;
+  background: #0000ff;
 }
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2177,7 +2177,7 @@ article.blog .social-buttons {
   transition: bottom 1s;
   width: 36rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   article.blog .social-buttons {
     left: -1px;
     width: 100%;
@@ -2281,6 +2281,11 @@ html {
   height: 100%;
   width: 100%;
 }
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
 body {
   background-attachment: fixed;
   background-size: cover;
@@ -2296,46 +2301,24 @@ body {
   border: 0.125em solid #000;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 2em;
+  padding: 32px;
   max-width: 100%;
   min-height: 100%;
   overflow-x: hidden;
   text-align: left;
-  width: 50rem;
+  width: 800px;
 }
 header {
-  clear: both;
-  margin: 0 auto;
-  height: 6.25em;
-  text-align: center;
+  background: url(/images/buildings.svg);
   box-sizing: border-box;
-  max-width: 100%;
+  margin-bottom: 16px;
+  text-align: center;
+  width: 100%;
 }
-header div {
-  height: 5em;
-  overflow: hidden;
-  width: 16em;
-}
-header div img {
-  height: 5em;
-  width: 16em;
-}
-header div.center {
-  background: #fff;
-  float: left;
-  left: 0;
-  margin: 0 auto;
-  padding-right: 0.3em;
-  position: absolute;
-  right: 0;
-}
-header div.left {
-  float: left;
-  width: 33.3%;
-}
-header div.right {
-  float: right;
-  width: 33.3%;
+header h1 {
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  padding-top: 6px;
 }
 article {
   display: none;
@@ -2361,15 +2344,6 @@ div.bottom {
   padding-top: 2em;
   text-align: center;
   width: 100%;
-}
-div.viewerwrapper {
-  min-height: 91%;
-  position: inherit;
-  width: 40em;
-}
-div.vignette {
-  margin: 0 auto;
-  text-align: center;
 }
 div.code {
   margin: 0 0 3em 0;
@@ -2415,10 +2389,8 @@ div.code {
 #navbar ul .select {
   color: #000;
   display: inline;
-  padding: 0.25em;
   text-decoration: none;
   vertical-align: middle;
-  width: 0.8em;
 }
 a {
   color: gray;
@@ -2509,17 +2481,7 @@ pre {
   overflow-x: auto;
   padding-left: 0.5em;
 }
-@media screen and (max-width: 750px) {
-  nav .select:nth-child(2):after {
-    content: '';
-    display: block;
-  }
-}
-/* =Smartphones (portrait)*/
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 14px;
-  }
+@media screen and (max-width: 800px) {
   #container {
     padding: 0;
   }
@@ -2527,12 +2489,14 @@ pre {
     padding-left: 0.3em;
     padding-right: 0.3em;
   }
-  nav .select:nth-child(2):after {
-    content: '';
-    display: block;
-  }
   nav.blog {
     padding-bottom: 1em;
     padding-top: 1em;
+  }
+}
+@media screen and (max-width: 650px) {
+  nav .select:nth-child(2):after {
+    content: '';
+    display: block;
   }
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generated at drububu.com  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="135px" height="75px" viewBox="0 0 135 75">
+<path d="M45 0h15v30h15v45h-30z" fill="rgb(153,153,153)"/>
+<path d="M75 15h15v60h-15z" fill="rgb(170,170,170)"/>
+<path d="M120 15h15v60h-15z" fill="rgb(170,170,170)"/>
+<path d="M15 30h30v45h-30z" fill="rgb(170,170,170)"/>
+<path d="M0 45h15v30h-15z" fill="rgb(153,153,153)"/>
+<path d="M90 45h15v15h15v15h-30z" fill="rgb(153,153,153)"/>
+</svg>
