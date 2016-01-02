@@ -81,7 +81,10 @@ function (AppView, singlePostTemplate, blogListTemplate) {
             hljs.highlightBlock(this);
         },
         "initLazyLoad": function () {
-            this.$('img').lazyload({"skip_invisible": true});
+            this.$('img').lazyload({
+                "skip_invisible": true,
+                "container": $('#container')
+            });
         }
     });
 });

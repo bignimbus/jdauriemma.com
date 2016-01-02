@@ -5736,7 +5736,10 @@ views_blog = function (AppView, singlePostTemplate, blogListTemplate) {
       hljs.highlightBlock(this);
     },
     'initLazyLoad': function () {
-      this.$('img').lazyload({ 'skip_invisible': true });
+      this.$('img').lazyload({
+        'skip_invisible': true,
+        'container': $('#container')
+      });
     }
   });
 }(views_main, templates_single_post, templates_blog_list);
