@@ -57,7 +57,7 @@ function (AppView, singlePostTemplate, blogListTemplate) {
         "showSocial": function () {
             var $shareBar = this.$('.social-buttons'),
                 isVisible = $shareBar.hasClass('show'),
-                scrollTop = $('body').scrollTop();
+                scrollTop = $('#container').scrollTop();
             if (scrollTop > this.previousScrollTop && !isVisible) {
                 $shareBar.addClass('show');
             } else if (scrollTop < this.previousScrollTop && isVisible) {
