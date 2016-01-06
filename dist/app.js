@@ -5527,7 +5527,7 @@ views_main = function (loadingTemplate, router) {
         this.triggerScrollEvent();
       }.bind(this);
       if (this.previousScrollTop !== void 0) {
-        $('#container').on('scroll', _.debounce(triggerScroll, 200));
+        $(document).on('scroll', _.debounce(triggerScroll, 200));
       }
     },
     'triggerScrollEvent': function () {
@@ -5714,7 +5714,7 @@ views_blog = function (AppView, singlePostTemplate, blogListTemplate) {
       return 'blog_' + post.get('slug');
     },
     'showSocial': function () {
-      var $shareBar = this.$('.social-buttons'), isVisible = $shareBar.hasClass('show'), scrollTop = $('#container').scrollTop();
+      var $shareBar = this.$('.social-buttons'), isVisible = $shareBar.hasClass('show'), scrollTop = $(document).scrollTop();
       if (scrollTop > this.previousScrollTop && !isVisible) {
         $shareBar.addClass('show');
       } else if (scrollTop < this.previousScrollTop && isVisible) {

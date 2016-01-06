@@ -43,6 +43,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<div id="scroll-box">
 <div id="container">
     <header>
         <h1>Jeffrey<br>Auriemma</h1>
@@ -58,6 +59,7 @@
    rel=author">This site was designed and developed by Jeffrey Auriemma.</a></p>
         </footer>
     </div>
+</div>
 </div>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>

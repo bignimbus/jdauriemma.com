@@ -4,7 +4,7 @@
 }
 .colorize:active,
 .colorize:hover {
-  background: #ff0000;
+  background: #ffa500;
 }
 article.music li,
 article.social li,
@@ -224,6 +224,7 @@ body {
 }
 header {
   background: url(/images/buildings.svg);
+  background-repeat: repeat-x;
   box-sizing: border-box;
   margin-bottom: 16px;
   text-align: center;
@@ -254,8 +255,7 @@ div {
 }
 div.bottom {
   clear: both;
-  height: 2.5em;
-  padding-top: 2em;
+  padding: 32px 0;
   text-align: center;
   width: 100%;
 }

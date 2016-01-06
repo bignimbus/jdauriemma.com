@@ -40,7 +40,7 @@ function (loadingTemplate, router) {
                 this.triggerScrollEvent();
             }.bind(this);
             if (this.previousScrollTop !== void 0) {
-                $('#container').on('scroll', _.debounce(triggerScroll, 200));
+                $(document).on('scroll', _.debounce(triggerScroll, 200));
             }
         },
         "triggerScrollEvent": function () {
