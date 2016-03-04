@@ -6,7 +6,7 @@ $tumblrUrl = 'http://jdauriemma.tumblr.com/api/read/json';
 
 $response = file_get_contents($tumblrUrl);
 
-$responseJSON = substr(substr($response, 22), 0, -2);
+$responseJSON = substr($response, 22, -1);
 
 fwrite($tumblrInfo, $responseJSON);
 
