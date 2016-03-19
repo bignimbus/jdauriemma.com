@@ -4,7 +4,7 @@
 }
 .colorize:active,
 .colorize:hover {
-  background: #ffa500;
+  background: #0000ff;
 }
 article.music li,
 article.social li,
@@ -209,6 +209,9 @@ body {
   height: 100%;
   margin: 0;
   width: 100%;
+}
+#scroll-box {
+  position: relative;
 }
 #container {
   background: white;
